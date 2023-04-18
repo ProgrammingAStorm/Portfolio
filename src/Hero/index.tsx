@@ -14,7 +14,7 @@ function Hero() {
     };
   }, []);
 
-  const minWidth = '100px';
+  const minWidth = '320px';
 
   return (
     <header className="bg-pink-500 w-full transition-all p-2 sm:p-6 md:p-10 lg:p-14" style={{
@@ -26,20 +26,19 @@ function Hero() {
         borderRadius: isScrolled ? '0%' : '5%',
         flexDirection: isScrolled ? 'column' : 'row',
       }}>
-        <div className="flex" style={{
+        <div className="flex justify-center items-center" style={{
           flexDirection: isScrolled ? 'row' : 'column',
           height: isScrolled ? '100%' : '50%',
           width: isScrolled ? '33%' : '100%',
           minWidth
         }}>
-          <h1 className="" style={{
-            height: isScrolled ? '100%' : '66%',
-            width: isScrolled ? '60%' : '100%'
-          }}>Mark Pavel</h1>
-          <h2 className="" style={{
-            height: isScrolled ? '100%' : '33%',
-            width: isScrolled ? '40%' : '100%'
-          }}>ProgrammingAStorm</h2>
+          <h1 className="lg:text-9xl md:text-8xl sm:text-7xl text-6xl" style={{}}>
+            Mark Pavel
+          </h1>
+          
+          <h2 className="lg:text-6xl md:text-5xl sm:text-4xl text-3xl" style={{}}>
+            {isScrolled ? 'P.A.G.' : 'ProgrammingAStorm'}
+          </h2>
         </div>
       </div>
     </header>
