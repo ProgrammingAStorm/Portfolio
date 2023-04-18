@@ -1,51 +1,17 @@
 import Hero from "./Hero";
+import AboutMe from "./AboutMe";
+import Footer from "./Footer";
 
 function App() {
   return (
     <>
-      <main className="w-full h-full">
-        <Hero />
+      <Hero />
 
-        <div style={{height: '25%', width: '100%'}}>
-          bruh
-        </div>
-        <div style={{height: '25%', width: '100%'}}>
-          bruh
-        </div>
-        <div style={{height: '25%', width: '100%'}}>
-          bruh
-        </div>
-        <div style={{height: '25%', width: '100%'}}>
-          bruh
-        </div>
-        <div style={{height: '25%', width: '100%'}}>
-          bruh
-        </div>
-        <div style={{height: '25%', width: '100%'}}>
-          bruh
-        </div>
-        <div style={{height: '25%', width: '100%'}}>
-          bruh
-        </div>
-        <div style={{height: '25%', width: '100%'}}>
-          bruh
-        </div>
-        <div style={{height: '25%', width: '100%'}}>
-          bruh
-        </div>
-        <div style={{height: '25%', width: '100%'}}>
-          bruh
-        </div>
-        <div style={{height: '25%', width: '100%'}}>
-          bruh
-        </div>
-        <div style={{height: '25%', width: '100%'}}>
-          bruh
-        </div>
-        <div style={{height: '25%', width: '100%'}}>
-          bruh
-        </div>
+      <main className="main">
+        <AboutMe />
       </main>
+
+      <Footer />
     </>
   )
 }

@@ -18,8 +18,18 @@ body {
     height: 100%;
 }
 
-.header-full {
-}
+@layer components {
+    .main {
+        height: calc(100% - calc(25% - 65px));
 
-header .header-content {
+        @apply w-full;
+    }
+
+    .section {
+        @apply w-full h-full;
+    }
+
+    .footer {
+        @apply h-1/4 w-full;
+    }
 }
