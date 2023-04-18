@@ -18,7 +18,7 @@ function Hero() {
 
   return (
     <header className="bg-pink-500 w-full transition-all p-2 sm:p-6 md:p-10 lg:p-14" style={{
-      height: isScrolled ? '65px' : '100%',
+      height: isScrolled ? '100px' : '100%',
       position: isScrolled ? 'fixed' : 'relative',
       padding: isScrolled ? '.175rem' : ''
     }}>
@@ -26,17 +26,22 @@ function Hero() {
         borderRadius: isScrolled ? '0%' : '5%',
         flexDirection: isScrolled ? 'column' : 'row',
       }}>
-        <div className="flex justify-center items-center" style={{
+        <div className="flex sm:justify-start justify-center items-center" style={{
           flexDirection: isScrolled ? 'row' : 'column',
           height: isScrolled ? '100%' : '50%',
           width: isScrolled ? '33%' : '100%',
+          gap: isScrolled ? '.25rem' : '',
           minWidth
         }}>
-          <h1 className="lg:text-9xl md:text-8xl sm:text-7xl text-6xl" style={{}}>
+          <h1 className="lg:text-9xl md:text-8xl sm:text-7xl text-6xl" style={{
+            fontSize: isScrolled ? "2rem" : '',
+          }}>
             Mark Pavel
           </h1>
-          
-          <h2 className="lg:text-6xl md:text-5xl sm:text-4xl text-3xl" style={{}}>
+
+          <h2 className="lg:text-6xl md:text-5xl sm:text-4xl text-3xl" style={{
+            fontSize: isScrolled ? "2rem" : ''
+          }}>
             {isScrolled ? 'P.A.G.' : 'ProgrammingAStorm'}
           </h2>
         </div>
