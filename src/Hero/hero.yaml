@@ -13,7 +13,7 @@ methods:
 
 lifecycle:
   - componentDidMount:
-    description: Component's height is set to 100% when not scrolled, and 100px and its position is set to fixed when scrolled, with a padding of 0 when not scrolled and a .175rem when scrolled. Regardless, the component will have a min with of 320px.
+    description: Component's height is set to 100% when not scrolled, and 100px and its position is set to fixed when scrolled, with a padding of '' when not scrolled and a .175rem when scrolled. Regardless, the component will have a min with of fit-content.
 
 className: "bg-pink-500 w-full transition-all p-2 sm:p-6 md:p-10 lg:p-14"
 
@@ -23,7 +23,7 @@ contents:
 
     lifecycle:
     - componentDidMount:
-      description: "When the window has not been scrolled, the component has a border radius of 5% and a flex direction of row, but once the window scrolls, the border radius is reduced to 0% and the flex direction becomes column. Regardless, the component will have a minimum width of 320px."
+      description: When the window has not been scrolled, the component has a border radius of 5% and a flex direction of row, but once the window scrolls, the border radius is reduced to 0% and the flex direction becomes column. Regardless, the component will have a minimum width of 320px.
 
     className: "flex w-full h-full bg-purple-500 transition-all"
 
@@ -33,9 +33,9 @@ contents:
 
         lifecycle:
           - componentDidMount: 
-            description: "When the window has not been scrolled, the component has a flex direction of column, a width of 100%, and a height of 50%, and a gap of .25rem, and, when the component has scrolled, it will have a flex direction of row, a width of 33%, and a height of 100%. Regardless, the component will have a minimun width of 320px"
+            description: When the window has not been scrolled, the component has a flex direction of column and a width of 100%, and, when the component has scrolled, it will have a flex direction of row. Regardless, the component will have a minimun width of 320px
 
-        classname: "flex sm:justify-start justify-center items-center"
+        classname: "flex justify-center items-center"
 
         contents: 
           - name: Hero Header
@@ -43,9 +43,9 @@ contents:
 
             lifecycle:
               - componentDidMout:
-                description: When the window has not been scrolled, the component has a height of 66% and a width of 100%, and when the window is scrolled, the component has a height of 100%, a width of 60%, and a font size of 2rem.
+                description: When the window has not been scrolled, the component has a font size of '' and when the window is scrolled, the component will have a font size of 2rem.
 
-            classname: "lg:text-9xl md:text-8xl sm:text-7xl text-6xl"
+            classname: "lg:text-9xl md:text-8xl sm:text-7xl text-6xl m-1"
 
             text: Mark Pavel
 
@@ -54,6 +54,48 @@ contents:
 
             lifecycle:
               - componentDidMout:
-                description: When the window has not been scrolled, the component has a height of 33%  a width of 100%, and the test will say "ProgrammingAStorm", and when the window is scrolled, the component has a height of 100%, a width of 40%, font size of 2rem and the text will say "P.A.S."
+                description: When the window has not been scrolled, the text will say "ProgrammingAStorm" and the component will have a font-size of '', and when the window is scrolled, the component has a font size of 2rem and the text will say "P.A.S."
 
-            classname: lg:text-6xl md:text-5xl sm:text-4xl text-3xl
+            classname: lg:text-6xl md:text-5xl sm:text-4xl text-2xl m-1
+
+      - name: Hero Navigation
+        description: A nav element that holds links to differnt parts of the page.
+
+        classname: flex flex-wrap gap-6 justify-center items-center h-1/2 w-full
+
+        contents:
+          - name: Front End Link
+            description: A link to navigate to a certain part of the page
+
+            className: flex h-1/4 px-8 rounded-md items-center justify-center bg-slate-600
+
+            href: '#frontend'
+           
+          - name: Back End Link
+            description: A link to navigate to a certain part of the page
+
+            className: flex h-1/4 px-8 rounded-md items-center justify-center bg-slate-600
+
+            href: '#backend'
+
+          - name: Full Stack Link
+            description: A link to navigate to a certain part of the page
+
+            className: flex h-1/4 px-8 rounded-md items-center justify-center bg-slate-600
+
+            href: '#fullstack'
+
+          - name: About Me Link
+            description: A link to navigate to a certain part of the page
+
+            className: flex h-1/4 px-8 rounded-md items-center justify-center bg-slate-600
+
+            href: '#aboutme'
+
+          - name: Contact Me Link
+            description: A link to navigate to a certain part of the page
+
+            className: flex h-1/4 px-8 rounded-md items-center justify-center bg-slate-600
+
+            href: '#contactme'
+            

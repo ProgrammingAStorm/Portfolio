@@ -1,90 +1,82 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
-function Hero() {
+const Hero = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleScroll = () => {
-    setIsScrolled(window.pageYOffset !== 0);
+    const scrolled = window.scrollY > 0;
+    setIsScrolled(scrolled);
   };
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const minWidth = '320px';
+  const flexDirection = isScrolled ? 'row' : 'column';
+  const width = isScrolled ? '33%' : '100%';
+  const fontSize = isScrolled ? '2rem' : '';
+  const subHeaderFontSize = isScrolled ? '2rem' : '';
+  const subHeaderText = isScrolled ? 'P.A.S.' : 'ProgrammingAStorm';
 
   return (
-    <header className="bg-pink-500 w-full transition-all p-2 sm:p-6 md:p-10 lg:p-14" style={{
-      height: isScrolled ? '100px' : '100%',
-      position: isScrolled ? 'fixed' : 'relative',
-      padding: isScrolled ? '.175rem' : ''
-    }}>
-      <div className="flex w-full h-full bg-purple-500 transition-all" style={{
-        borderRadius: isScrolled ? '0%' : '5%',
-        flexDirection: isScrolled ? 'column' : 'row',
-      }}>
-        <div className="flex sm:justify-start justify-center items-center" style={{
-          flexDirection: isScrolled ? 'row' : 'column',
-          height: isScrolled ? '100%' : '50%',
-          width: isScrolled ? '33%' : '100%',
-          gap: isScrolled ? '.25rem' : '',
-          minWidth
-        }}>
-          <h1 className="lg:text-9xl md:text-8xl sm:text-7xl text-6xl" style={{
-            fontSize: isScrolled ? "2rem" : '',
-          }}>
+    <header
+      className="bg-pink-500 w-full transition-all p-2 sm:p-6 md:p-10 lg:p-14"
+      style={{
+        height: isScrolled ? '100px' : '100%',
+        position: isScrolled ? 'fixed' : 'relative',
+        padding: isScrolled ? '.175rem' : '',
+        minWidth: 'fit-content',
+      }}
+    >
+      <div
+        className="flex w-full h-full bg-purple-500 transition-all"
+        style={{
+          borderRadius: isScrolled ? '0%' : '5%',
+          flexDirection,
+          minWidth: '320px',
+        }}
+      >
+        <div
+          className="flex h-1/2 justify-center items-center"
+          style={{
+            flexDirection,
+            height: isScrolled ? '100%' : '50%',
+            width,
+            minWidth: '320px',
+          }}
+        >
+          <h1
+            className="lg:text-9xl md:text-8xl sm:text-7xl text-6xl m-1"
+            style={{
+              fontSize,
+            }}
+          >
             Mark Pavel
           </h1>
 
-          <h2 className="lg:text-6xl md:text-5xl sm:text-4xl text-3xl" style={{
-            fontSize: isScrolled ? "2rem" : ''
-          }}>
-            {isScrolled ? 'P.A.G.' : 'ProgrammingAStorm'}
+          <h2
+            className="lg:text-6xl md:text-5xl sm:text-4xl text-2xl m-1"
+            style={{
+              fontSize: subHeaderFontSize,
+            }}
+          >
+            {subHeaderText}
           </h2>
         </div>
+
+        <nav
+          className="flex flex-wrap gap-6 justify-center items-center h-1/2 w-full"
+        >
+          <a className='flex h-1/4 px-8 rounded-md items-center justify-center bg-slate-600' href="#section1">Section 1</a>
+          <a className='flex h-1/4 px-8 rounded-md items-center justify-center bg-slate-600' href="#section2">Section 2</a>
+          <a className='flex h-1/4 px-8 rounded-md items-center justify-center bg-slate-600' href="#section3">Section 3</a>
+          <a className='flex h-1/4 px-8 rounded-md items-center justify-center bg-slate-600' href="#section4">Section 4</a>
+          <a className='flex h-1/4 px-8 rounded-md items-center justify-center bg-slate-600' href="#section5">Section 5</a>
+        </nav>
       </div>
     </header>
   );
 };
 
 export default Hero;
-
-
-// import { useState, useEffect } from "react";
-
-// const Hero = () => {
-//   const [isScrolled, setIsScrolled] = useState(false);
-
-//   const handleScroll = () => {
-//     setIsScrolled(window.scrollY > 0);
-//   };
-
-//   useEffect(() => {
-//     window.addEventListener("scroll", handleScroll);
-//     return () => {
-//       window.removeEventListener("scroll", handleScroll);
-//     };
-//   }, []);
-
-//   return (
-//     <header className="bg-pink-500 w-full transition-all p-2 sm:p-6 md:p-10 lg:p-14" style={{
-//       height: isScrolled ? "65px" : "100%",
-//       position: isScrolled ? "fixed" : "relative",
-//       padding: isScrolled ? ".175rem" : "",
-//     }}>
-//       <div className="flex flex-col w-full h-full bg-purple-500 transition-all" style={{
-//         borderRadius: isScrolled ? "0%" : "5%",
-//       }}>
-//         <div className="">
-//           <h1>Mark Pavel</h1>
-//           <h2>ProgrammingAStorm</h2>
-//         </div>
-//       </div>
-//     </header>
-//   );
-// };
-
-// export default Hero;
