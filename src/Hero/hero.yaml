@@ -92,7 +92,7 @@ contents:
         description: A nav element that holds links to differnt parts of the page.
 
         lifecycle:
-          -componentDidMount: When the window has scrolled, the component will have the class 'scroll', otherwise, it will not. If isBurgerOpen is true, the component will have the class 'open', otherwise it will not.
+          -componentDidMount: When the window has scrolled, the component will have the class 'scroll', otherwise, it will not. If isBurgerOpen and isScrolled is true, the component will have the class 'open', otherwise it will not.
 
         classname: navBar
 

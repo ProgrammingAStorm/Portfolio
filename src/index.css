@@ -28,13 +28,20 @@ body {
 
 .header-content.scroll {
     flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+
     border-radius: 0;
 }
 
 .hero-headers.scroll {
     flex-direction: row;
+
+    justify-content: start;
+
     height: 100%;
-    width: 33%;
+    width: 100%;
 }
 
 .main-header.scroll {
@@ -50,15 +57,15 @@ body {
     height: 2rem;
     /* position: fixed;
     top: 15px;
-    right: 20px;
-    z-index: 20; */
+    right: 20px;*/
+    z-index: 20; 
     /* display: none; */
 
-    @media (max-width: 768px) {
+    /* @media (max-width: 768px) {
         display: flex;
         justify-content: space-around;
         flex-flow: column nowrap;
-    }
+    } */
 }
 
 .burger-content {
@@ -66,7 +73,7 @@ body {
     height: 0.5rem;
     background-color: black;
     border-radius: 10px;
-    transform-origin: 1px;
+    transform-origin: 2px;
     transition: all 0.3s linear;
     border: 1px solid white;
 }
@@ -76,7 +83,6 @@ body {
 }
 
 .burger.open>.burger-content:nth-child(2) {
-    transform: translateX(100%);
     opacity: 0;
 }
 
@@ -84,10 +90,28 @@ body {
     transform: rotate(-35deg);
 }
 
-.navBar.scroll {}
-
-.navBar.open {
+.navBar.scroll {
     position: absolute;
+
+    flex-direction: column;
+    gap: 2rem;
+
+    top: 0%;
+    right: -300%;
+
+    width: 25%;
+    height: 100vh;
+    min-width: 320px;
+}
+
+.navBar.scroll.open {
+    top: 0%;
+    right: 0%;
+}
+
+.navBar-items.scroll {
+    height: 15%;
+    width: 50%;
 }
 
 @layer components {
@@ -96,8 +120,7 @@ body {
             h-full w-full
             min-w-[320px]
             p-2 sm:p-6 md:p-10 lg:p-14
-            bg-pink-500
-            transition-all;
+            bg-pink-500;
     }
 
     .header-content {
@@ -106,6 +129,8 @@ body {
             w-full h-full 
             rounded
             bg-purple-500
+            sm:overflow-x-visible
+            overflow-x-scroll
             transition-all;
     }
 
@@ -114,19 +139,31 @@ body {
         flex flex-col
         justify-center
         items-center
-        h-1/2 w-full;
+        h-1/2 w-full
+        transition-all;
     }
 
     .main-header {
         @apply 
             m-1
-            lg:text-9xl md:text-8xl sm:text-7xl text-5xl;
+            lg:text-9xl md:text-8xl sm:text-7xl text-5xl
+            transition-all;
     }
 
     .sub-header {
         @apply
             m-1
-            lg:text-6xl md:text-5xl sm:text-4xl text-2xl;
+            lg:text-6xl md:text-5xl sm:text-4xl text-2xl
+            transition-all;
+    }
+
+    .burger {
+        @apply 
+            flex flex-col
+            justify-center items-start
+            w-8 h-8
+            m-2
+            z-10;
     }
 
     .navBar {
@@ -135,6 +172,8 @@ body {
             justify-center items-center
             gap-1
             h-1/2 w-full
+            bg-green-600
+            transition-all
             overflow-x-auto; 
     }
 
@@ -145,6 +184,7 @@ body {
             h-1/4 
             px-8 
             rounded-md 
+            transition-all
             bg-slate-600;
     }
 

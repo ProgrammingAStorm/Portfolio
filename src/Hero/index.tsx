@@ -8,6 +8,7 @@ function Hero() {
     if (window.pageYOffset > 0) {
       setIsScrolled(true);
     } else {
+      setIsBurgerOpen(false)
       setIsScrolled(false);
     }
   };
@@ -29,20 +30,20 @@ function Hero() {
         </div>
 
         {isScrolled && (
-          <div className={`burger ${isBurgerOpen === true ? 'open' : ''}`} onClick={() => setIsBurgerOpen(!isBurgerOpen)}>
-            <div className="burger-content"></div>
-            <div className="burger-content"></div>
-            <div className="burger-content"></div>
+          <div className={`burger ${isBurgerOpen ? 'open' : ''}`} onClick={() => setIsBurgerOpen(!isBurgerOpen)}>
+            <div className="burger-content" ></div>
+            <div className="burger-content" ></div>
+            <div className="burger-content" ></div>
           </div>
         )}
 
         <nav className={`navBar ${isScrolled ? 'scroll' : ''} ${isBurgerOpen ? 'open' : ''}`}>
 
-          <a className="navBar-items" href="#frontend">Frontend</a>
-          <a className="navBar-items" href="#backend">Backend</a>
-          <a className="navBar-items" href="#fullstack">Fullstack</a>
-          <a className="navBar-items" href="#aboutme">About Me</a>
-          <a className="navBar-items" href="#contactme">Contact Me</a>
+          <a className={`navBar-items ${isScrolled ? 'scroll' : ''}`} href="#frontend">Frontend</a>
+          <a className={`navBar-items ${isScrolled ? 'scroll' : ''}`} href="#backend">Backend</a>
+          <a className={`navBar-items ${isScrolled ? 'scroll' : ''}`} href="#fullstack">Fullstack</a>
+          <a className={`navBar-items ${isScrolled ? 'scroll' : ''}`} href="#aboutme">About Me</a>
+          <a className={`navBar-items ${isScrolled ? 'scroll' : ''}`} href="#contactme">Contact Me</a>
 
         </nav >
       </section >
