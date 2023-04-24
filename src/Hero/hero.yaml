@@ -1,11 +1,16 @@
 name: Hero
-description: A react component that grows and shrinks depending on how far the window is scrolled.
+description: A header element that grows and shrinks depending on how far the window is scrolled.
 
 state: 
   - name: isScrolled
     type: boolean
     initialValue: false
     description: Whether or not the page has been scrolled
+    
+  - name: isBurgerOpen
+    type: boolean
+    initialValue: false
+    description: Whether or not the navbar burger has been opened
 
 methods: 
   - name: handleScroll
@@ -13,9 +18,9 @@ methods:
 
 lifecycle:
   - componentDidMount:
-    description: Component's height is set to 100% when not scrolled, and 100px and its position is set to fixed when scrolled, with a padding of '' when not scrolled and a .175rem when scrolled. Regardless, the component will have a min with of fit-content.
+    description: If the window has been scrolled, the class of 'scroll' will be added, otherwise, it will not be added.
 
-className: "bg-pink-500 w-full transition-all p-2 sm:p-6 md:p-10 lg:p-14"
+className: "header"
 
 contents:
   - name: Hero Content
@@ -23,19 +28,19 @@ contents:
 
     lifecycle:
     - componentDidMount:
-      description: When the window has not been scrolled, the component has a border radius of 5% and a flex direction of row, but once the window scrolls, the border radius is reduced to 0% and the flex direction becomes column. Regardless, the component will have a minimum width of 320px.
+      description: When the window has been scrolled, the component will have the class 'scroll', otherwise, it will not.
 
-    className: "flex w-full h-full bg-purple-500 transition-all"
+    className: header-content
 
     contents: 
       - name: Hero Headers
         description: A container for the hero's headers
 
-        lifecycle:
+        lifecycle: 
           - componentDidMount: 
-            description: When the window has not been scrolled, the component has a flex direction of column and a width of 100%, and, when the component has scrolled, it will have a flex direction of row. Regardless, the component will have a minimun width of 320px
+            description: When the window has been scrolled, the component will have the class 'scroll', otherwise, it will not.
 
-        classname: "flex justify-center items-center"
+        classname: "hero-headers"
 
         contents: 
           - name: Hero Header
@@ -43,9 +48,9 @@ contents:
 
             lifecycle:
               - componentDidMout:
-                description: When the window has not been scrolled, the component has a font size of '' and when the window is scrolled, the component will have a font size of 2rem.
+                description: When the window has not been scrolled, the component will have the class 'scroll', otherwise it will not.
 
-            classname: "lg:text-9xl md:text-8xl sm:text-7xl text-6xl m-1"
+            classname: "main-header"
 
             text: Mark Pavel
 
@@ -54,48 +59,86 @@ contents:
 
             lifecycle:
               - componentDidMout:
-                description: When the window has not been scrolled, the text will say "ProgrammingAStorm" and the component will have a font-size of '', and when the window is scrolled, the component has a font size of 2rem and the text will say "P.A.S."
+                description: When the window has been scrolled, it will have the class of scroll, and its text will be "P.A.S," otherwise, it will have the class '' and its text will be "ProgrammingAStorm."
 
-            classname: lg:text-6xl md:text-5xl sm:text-4xl text-2xl m-1
+            classname: sub-header 
+
+      - name: Hero Burger
+        description: A navbar burger that is only rendered when the page is scrolled that can be clicked to toggle the navbar.
+
+        lifecycle:
+        - componentDidMount: If the page has not been scrolled, this component will not render, otherwise, this component will render. If isBurgerOpen is set to true this component will have the class 'open' added to it, otherwise, it will not.
+        - onClick: The boolean value of isBurgerOpen is flipped.
+
+        classname: "burger"
+
+        contents:
+          - name: Burger Content
+            description: Animated content of the hero burger.
+
+            classname: burger-content
+
+          - name: Burger Content
+            description: Animated content of the hero burger.
+          
+            classname: burger-content
+
+          - name: Burger Content
+            description: Animated content of the hero burger.
+          
+            classname: burger-content
 
       - name: Hero Navigation
         description: A nav element that holds links to differnt parts of the page.
 
-        classname: flex flex-wrap gap-6 justify-center items-center h-1/2 w-full
+        lifecycle:
+          -componentDidMount: When the window has scrolled, the component will have the class 'scroll', otherwise, it will not. If isBurgerOpen is true, the component will have the class 'open', otherwise it will not.
+
+        classname: navBar
 
         contents:
           - name: Front End Link
             description: A link to navigate to a certain part of the page
 
-            className: flex h-1/4 px-8 rounded-md items-center justify-center bg-slate-600
+            className: navBar-items
 
             href: '#frontend'
+
+            text: Frontend
            
           - name: Back End Link
             description: A link to navigate to a certain part of the page
 
-            className: flex h-1/4 px-8 rounded-md items-center justify-center bg-slate-600
+            className: navBar-items
 
             href: '#backend'
+
+            text: Backend
 
           - name: Full Stack Link
             description: A link to navigate to a certain part of the page
 
-            className: flex h-1/4 px-8 rounded-md items-center justify-center bg-slate-600
+            className: navBar-items
 
             href: '#fullstack'
+
+            text: Fullstack
 
           - name: About Me Link
             description: A link to navigate to a certain part of the page
 
-            className: flex h-1/4 px-8 rounded-md items-center justify-center bg-slate-600
+            className: navBar-items
 
             href: '#aboutme'
+
+            text: About Me
 
           - name: Contact Me Link
             description: A link to navigate to a certain part of the page
 
-            className: flex h-1/4 px-8 rounded-md items-center justify-center bg-slate-600
+            className: navBar-items
 
             href: '#contactme'
+
+            text: Contact Me
             
