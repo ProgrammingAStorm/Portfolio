@@ -193,7 +193,7 @@ body {
     }
 
     .main {
-        height: calc(100% - calc(25% - 65px));
+        height: calc(100% - calc(25% - 100px));
 
         @apply w-full;
     }
