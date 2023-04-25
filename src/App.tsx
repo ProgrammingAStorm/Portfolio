@@ -1,10 +1,6 @@
 import Hero from "./Hero";
-import Frontend from "./Frontend";
-import Backend from "./Backend";
-import Fullstack from "./Fullstack";
-import AboutMe from "./AboutMe";
-import ContractMe from "./ContactMe";
 import Footer from "./Footer";
+import Content  from "./Content";
 
 function App() {
   return (
@@ -12,15 +8,25 @@ function App() {
       <Hero />
 
       <main className="main">
-        <Frontend />
+        <Content id="frontend" header="Frontend">
 
-        <Backend />
+        </Content>
 
-        <Fullstack />
+        <Content id="backend" header="Backend">
 
-        <AboutMe />
+        </Content>
 
-        <ContractMe />
+        <Content id="fullstack" header="Fullstack">
+
+        </Content>
+
+        <Content id="aboutme" header="About Me">
+
+        </Content>
+
+        <Content id="contactme" header="Conact Me">
+
+        </Content>        
       </main>
 
       <Footer />

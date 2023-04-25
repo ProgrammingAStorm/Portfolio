@@ -18,10 +18,6 @@ body {
     height: 100%;
 }
 
-#root {
-    height: 100%;
-}
-
 .header.click {
     height: 100px;
     min-height: 100px;
@@ -124,14 +120,22 @@ TODO {
 }
 
 @layer components {
+    #root:has(.header) {
+        overflow: hidden;
+    }
+
+    #root:has(.header.click) {
+        overflow: auto;
+    }
+
     .header {
-        @apply 
-            absolute
+        @apply  
             h-full w-full
             min-w-[320px]
             p-2 sm:p-6 md:p-10 lg:p-14
             bg-pink-500
-            overflow-hidden;
+            overflow-hidden
+            pointer-events-none;
     }
 
     .header-content {
@@ -169,6 +173,8 @@ TODO {
     }
 
     .burger {
+        animation: fade-in 0.5s ease-in forwards;
+
         @apply 
             flex flex-col
             justify-center items-start
@@ -189,6 +195,8 @@ TODO {
     }
 
     .navBar-items {
+        pointer-events: all;
+
         @apply 
             flex 
             items-center justify-center
@@ -200,20 +208,29 @@ TODO {
     }
 
     .arrow {
+        pointer-events: all;
+
         @apply absolute bottom-0 left-1/2 p-2 bg-yellow-400 border-[3px] border-blue-600 rounded-full opacity-0 transition-all;
     }
 
     .main {
-        min-height: calc(100% - calc(25% - 100px)); 
-
         @apply w-full;
     }
 
     .section {
-        @apply w-full h-screen;
+        @apply w-full bg-orange-300 h-screen;
     }
 
     .footer {
-        @apply h-1/4 w-full;
+        @apply h-1/6 w-full bg-amber-600;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
