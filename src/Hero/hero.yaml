@@ -109,7 +109,7 @@ contents:
 
             lifecycle:
               - onClick:
-                description: isClicked is set to true.
+                description: isClicked is set to true and isBurgerOpen is set to false.
 
             className: navBar-items
 
@@ -122,7 +122,7 @@ contents:
 
             lifecycle:
               - onClick:
-                description: isClicked is set to true.
+                description: isClicked is set to true and isBurgerOpen is set to false.
 
             className: navBar-items
 
@@ -135,7 +135,7 @@ contents:
 
             lifecycle:
               - onClick:
-                description: isClicked is set to true.
+                description: isClicked is set to true and isBurgerOpen is set to false.
 
             className: navBar-items
 
@@ -148,7 +148,7 @@ contents:
 
             lifecycle:
               - onClick:
-                description: isClicked is set to true.
+                description: isClicked is set to true and isBurgerOpen is set to false.
 
             className: navBar-items
 
@@ -161,7 +161,7 @@ contents:
 
             lifecycle:
               - onClick:
-                description: isClicked is set to true.
+                description: isClicked is set to true and isBurgerOpen is set to false.
 
             className: navBar-items
 

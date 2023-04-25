@@ -174,7 +174,6 @@ TODO {
 
     .burger {
         pointer-events: all;
-        animation: fade-in 0.5s ease-in forwards;
 
         @apply 
             flex flex-col

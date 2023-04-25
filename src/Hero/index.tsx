@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 function Hero() {
   const [isClicked, setIsClicked] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+  const [isDown, setIsDown] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -13,10 +14,13 @@ function Hero() {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleClick = () => setIsClicked(true);
+  const handleClick = () => {
+    setIsClicked(true);
+    setIsBurgerOpen(false);
+  };
 
   return (
-    <header className={`header ${isClicked ? 'click' : ''} ${isBurgerOpen ? 'open' : ''}`}>
+    <header className={`header ${isClicked ? 'click' : ''} ${isBurgerOpen ? 'open' : ''} ${isDown ? 'down' : ''}`}>
       <section className={`header-content ${isClicked ? 'click' : ''}`}>
         <div className={`hero-headers ${isClicked ? 'click' : ''}`}>
           <h1 className={`main-header ${isClicked ? 'click' : ''}`}>Mark Pavel</h1>
