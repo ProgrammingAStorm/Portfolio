@@ -7,11 +7,13 @@ function App() {
     <>
       <Hero />
 
-      <main className="main">
-        <AboutMe />
-      </main>
+      <div className="flex flex-col flex-1">
+        <main className="main">
+          <AboutMe />
+        </main>
 
-      <Footer />
+        <Footer />
+      </div>
     </>
   )
 }

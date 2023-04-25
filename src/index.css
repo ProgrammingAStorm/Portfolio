@@ -18,15 +18,23 @@ body {
     height: 100%;
 }
 
-.header.scroll {
-    height: 100px;
-    min-height: 100px;
-    position: fixed;
-    padding: .175rem;
-    min-width: fit-content;
+#root {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
 }
 
-.header-content.scroll {
+.header.click {
+    height: 100px;
+    min-height: 100px;
+    position: initial;
+    padding: .175rem;
+    min-width: fit-content;
+    overflow-x: hidden;
+}
+
+.header-content.click {
     flex-direction: row;
 
     justify-content: space-between;
@@ -35,7 +43,7 @@ body {
     border-radius: 0;
 }
 
-.hero-headers.scroll {
+.hero-headers.click {
     flex-direction: row;
 
     justify-content: start;
@@ -44,28 +52,16 @@ body {
     width: 100%;
 }
 
-.main-header.scroll {
+.main-header.click {
     font-size: 2rem;
 }
 
-.sub-header.scroll {
+.sub-header.click {
     font-size: 1.75rem;
 }
 
-.burger {
-    width: 2rem;
-    height: 2rem;
-    /* position: fixed;
-    top: 15px;
-    right: 20px;*/
-    z-index: 20; 
-    /* display: none; */
-
-    /* @media (max-width: 768px) {
-        display: flex;
-        justify-content: space-around;
-        flex-flow: column nowrap;
-    } */
+TODO {
+    /* put burger-content in the layer section  */
 }
 
 .burger-content {
@@ -90,37 +86,55 @@ body {
     transform: rotate(-35deg);
 }
 
-.navBar.scroll {
+.navBar.click {
+    display: none;
+
     position: absolute;
 
     flex-direction: column;
     gap: 2rem;
 
     top: 0%;
-    right: -300%;
+    right: -100%;
 
     width: 25%;
     height: 100vh;
     min-width: 320px;
+    
+    z-index: 5
 }
 
-.navBar.scroll.open {
+.navBar.click.open {
+    display: flex;
+
     top: 0%;
     right: 0%;
 }
 
-.navBar-items.scroll {
+.navBar-items.click {
     height: 15%;
     width: 50%;
+}
+
+.arrow.visible {
+    opacity: 1;
+
+    bottom: 5rem;
+}
+
+.arrow.visible.click {
+    display: none;
 }
 
 @layer components {
     .header {
         @apply 
+            absolute
             h-full w-full
             min-w-[320px]
             p-2 sm:p-6 md:p-10 lg:p-14
-            bg-pink-500;
+            bg-pink-500
+            overflow-hidden;
     }
 
     .header-content {
@@ -188,14 +202,12 @@ body {
             bg-slate-600;
     }
 
-    .TODO{
-        /* look at main and fix the calc thing */
+    .arrow {
+        @apply absolute bottom-0 left-1/2 p-2 bg-yellow-400 border-[3px] border-blue-600 rounded-full opacity-0 transition-all;
     }
 
     .main {
-        height: calc(100% - calc(25% - 100px));
-
-        @apply w-full;
+        @apply w-full flex-1;
     }
 
     .section {

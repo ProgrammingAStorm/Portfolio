@@ -1,35 +1,31 @@
 import { useState, useEffect } from 'react';
 
 function Hero() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
-  const handleScroll = () => {
-    if (window.pageYOffset > 0) {
-      setIsScrolled(true);
-    } else {
-      setIsBurgerOpen(false)
-      setIsScrolled(false);
-    }
-  };
-
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 1500);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => clearTimeout(timer);
   }, []);
 
+  const handleClick = () => setIsClicked(true);
+
   return (
-    <header className={`header ${isScrolled ? 'scroll' : ''}`}>
-      <section className={`header-content ${isScrolled ? 'scroll' : ''}`}>
-        <div className={`hero-headers ${isScrolled ? 'scroll' : ''}`}>
-          <h1 className={`main-header ${isScrolled ? 'scroll' : ''}`}>Mark Pavel</h1>
-          <h2 className={`sub-header ${isScrolled ? 'scroll' : ''}`}>{isScrolled ? 'P.A.S' : 'ProgrammingAStorm'}</h2>
+    <header className={`header ${isClicked ? 'click' : ''} ${isBurgerOpen ? 'open' : ''}`}>
+      <section className={`header-content ${isClicked ? 'click' : ''}`}>
+        <div className={`hero-headers ${isClicked ? 'click' : ''}`}>
+          <h1 className={`main-header ${isClicked ? 'click' : ''}`}>Mark Pavel</h1>
+          {!isClicked && (
+            <h2 className={`sub-header ${isClicked ? 'click' : ''}`}>Fullstack Web Developer</h2>
+          )}
         </div>
 
-        {isScrolled && (
+        {isClicked && (
           <div className={`burger ${isBurgerOpen ? 'open' : ''}`} onClick={() => setIsBurgerOpen(!isBurgerOpen)}>
             <div className="burger-content" ></div>
             <div className="burger-content" ></div>
@@ -37,15 +33,21 @@ function Hero() {
           </div>
         )}
 
-        <nav className={`navBar ${isScrolled ? 'scroll' : ''} ${isBurgerOpen ? 'open' : ''}`}>
+        <nav className={`navBar ${isClicked ? 'click' : ''} ${isBurgerOpen ? 'open' : ''}`}>
 
-          <a className={`navBar-items ${isScrolled ? 'scroll' : ''}`} href="#frontend">Frontend</a>
-          <a className={`navBar-items ${isScrolled ? 'scroll' : ''}`} href="#backend">Backend</a>
-          <a className={`navBar-items ${isScrolled ? 'scroll' : ''}`} href="#fullstack">Fullstack</a>
-          <a className={`navBar-items ${isScrolled ? 'scroll' : ''}`} href="#aboutme">About Me</a>
-          <a className={`navBar-items ${isScrolled ? 'scroll' : ''}`} href="#contactme">Contact Me</a>
+          <a className={`navBar-items ${isClicked ? 'click' : ''}`} href="#frontend">Frontend</a>
+          <a className={`navBar-items ${isClicked ? 'click' : ''}`} href="#backend">Backend</a>
+          <a className={`navBar-items ${isClicked ? 'click' : ''}`} href="#fullstack">Fullstack</a>
+          <a className={`navBar-items ${isClicked ? 'click' : ''}`} href="#aboutme">About Me</a>
+          <a className={`navBar-items ${isClicked ? 'click' : ''}`} href="#contactme">Contact Me</a>
 
         </nav >
+
+        <i className={`arrow ${isVisible ? 'visible' : ''} ${isClicked ? 'click' : ''}`} onClick={handleClick}>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6" >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+          </svg>
+        </i>
       </section >
     </header >
   );
