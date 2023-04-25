@@ -1,5 +1,9 @@
 import Hero from "./Hero";
+import Frontend from "./Frontend";
+import Backend from "./Backend";
+import Fullstack from "./Fullstack";
 import AboutMe from "./AboutMe";
+import ContractMe from "./ContactMe";
 import Footer from "./Footer";
 
 function App() {
@@ -7,13 +11,19 @@ function App() {
     <>
       <Hero />
 
-      <div className="flex flex-col flex-1">
-        <main className="main">
-          <AboutMe />
-        </main>
+      <main className="main">
+        <Frontend />
 
-        <Footer />
-      </div>
+        <Backend />
+
+        <Fullstack />
+
+        <AboutMe />
+
+        <ContractMe />
+      </main>
+
+      <Footer />
     </>
   )
 }

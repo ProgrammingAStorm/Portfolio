@@ -19,9 +19,6 @@ body {
 }
 
 #root {
-    display: flex;
-    flex-direction: column;
-
     height: 100%;
 }
 
@@ -207,11 +204,13 @@ TODO {
     }
 
     .main {
-        @apply w-full flex-1;
+        min-height: calc(100% - calc(25% - 100px)); 
+
+        @apply w-full;
     }
 
     .section {
-        @apply w-full h-full;
+        @apply w-full h-screen;
     }
 
     .footer {
