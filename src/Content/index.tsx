@@ -9,7 +9,7 @@ interface IContentProps {
 function Content({ id, header, children }: IContentProps) {
     return (
         <section id={id} className="section">
-            <h2>{header}</h2>
+            <h2 className='section-header'>{header}</h2>
 
             {children}
         </section>

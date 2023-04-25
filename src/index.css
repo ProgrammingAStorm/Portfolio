@@ -46,7 +46,7 @@ body {
 }
 
 .main-header.click {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .sub-header.click {
@@ -173,6 +173,7 @@ TODO {
     }
 
     .burger {
+        pointer-events: all;
         animation: fade-in 0.5s ease-in forwards;
 
         @apply 
@@ -218,7 +219,15 @@ TODO {
     }
 
     .section {
-        @apply w-full bg-orange-300 h-screen;
+        animation: open-up;
+
+        content: none;
+
+        @apply  flex flex-col items-center h-screen bg-orange-300
+    }
+
+    .section-header {
+        @apply lg:text-6xl md:text-5xl sm:text-4xl text-3xl;
     }
 
     .footer {
@@ -233,4 +242,8 @@ TODO {
     to {
         opacity: 1;
     }
+}
+
+@keyframes open-up {
+
 }
