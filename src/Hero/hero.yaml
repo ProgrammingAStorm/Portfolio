@@ -107,45 +107,65 @@ contents:
           - name: Front End Link
             description: A link to navigate to a certain part of the page
 
+            lifecycle:
+              - onClick:
+                description: isClicked is set to true.
+
             className: navBar-items
 
-            href: '#frontend'
+            href: 'frontend'
 
             text: Frontend
            
           - name: Back End Link
             description: A link to navigate to a certain part of the page
 
+            lifecycle:
+              - onClick:
+                description: isClicked is set to true.
+
             className: navBar-items
 
-            href: '#backend'
+            href: 'backend'
 
             text: Backend
 
           - name: Full Stack Link
             description: A link to navigate to a certain part of the page
 
+            lifecycle:
+              - onClick:
+                description: isClicked is set to true.
+
             className: navBar-items
 
-            href: '#fullstack'
+            href: 'fullstack'
 
             text: Fullstack
 
           - name: About Me Link
             description: A link to navigate to a certain part of the page
 
+            lifecycle:
+              - onClick:
+                description: isClicked is set to true.
+
             className: navBar-items
 
-            href: '#aboutme'
+            href: 'aboutme'
 
             text: About Me
 
           - name: Contact Me Link
             description: A link to navigate to a certain part of the page
 
+            lifecycle:
+              - onClick:
+                description: isClicked is set to true.
+
             className: navBar-items
 
-            href: '#contactme'
+            href: 'contactme'
 
             text: Contact Me
 
