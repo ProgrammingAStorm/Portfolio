@@ -6,12 +6,14 @@ interface IContentProps {
     children: ReactNode
 }
 
-function Content({ id, header, children }: IContentProps) {
+function Content(/*{ id, header, children }: IContentProps*/) {
     return (
-        <section id={id} className="section">
-            <h2 className='section-header'>{header}</h2>
+        <section
+            //id={id}
+            className="section">
+            {/* <h2 className='section-header'>{header}</h2> */}
 
-            {children}
+            {/* {children} */}
         </section>
     );
 }

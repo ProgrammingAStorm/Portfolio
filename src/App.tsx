@@ -13,25 +13,12 @@ function App() {
 
       {isClicked && (
         <Main>
-          <Content id="frontend" header="Frontend">
 
-          </Content>
+          <Content />
 
-          <Content id="backend" header="Backend">
+          <Content />
 
-          </Content>
-
-          <Content id="fullstack" header="Fullstack">
-
-          </Content>
-
-          <Content id="aboutme" header="About Me">
-
-          </Content>
-
-          <Content id="contactme" header="Contact Me">
-
-          </Content>
+          
         </Main>
       )}
 
