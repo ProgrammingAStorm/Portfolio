@@ -14,6 +14,13 @@ state:
     initialValue: 0
     description: Index of child currently being displayed
 
+methods: 
+  - name: handleLeft
+    description: If currentChild is equal to the length of children minus one, it is set to zero, otherwise, it is incremented.
+
+  - name: handleRight
+    description: If currentChild is equal to zero, it is set to the length of children minus one, otherwise it is decremented.
+
 contents:
   - name: Left Arrow
     description: The left arrow.

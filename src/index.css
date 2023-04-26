@@ -175,6 +175,8 @@ TODO {
     .burger {
         pointer-events: all;
 
+        animation: fade-in 0.5s linear forwards;
+
         @apply 
             flex flex-col
             justify-center items-start
@@ -220,7 +222,7 @@ TODO {
     .section {
         height: calc(100vh - (16.666667vh - 100px));
 
-        animation: open-up;
+        animation: fade-in 1s linear forwards;
         
         @apply  flex flex-col items-center bg-amber-200 transition-all;
     }
@@ -230,7 +232,7 @@ TODO {
     }
 
     .main-arrow {
-        @apply absolute p-1 top-1/2 bg-slate-300 hover:bg-slate-100 rounded-full lg:scale-[1.75] md:scale-[1.5] sm:scale-[1.3] lg:hover:scale-[1.8] md:hover:scale-[1.55] sm:hover:scale-[1.35] transition-all;
+        @apply absolute p-1 top-1/2 bg-slate-300 hover:bg-slate-100 rounded-full lg:scale-[1.75] md:scale-[1.5] sm:scale-[1.3] lg:hover:scale-[1.8] md:hover:scale-[1.55] sm:hover:scale-[1.35] transition-all z-10;
     }
 
     .main-arrow.left {

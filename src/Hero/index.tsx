@@ -39,11 +39,11 @@ function Hero() {
 
         <nav className={`navBar ${isClicked ? 'click' : ''} ${isBurgerOpen ? 'open' : ''}`}>
 
-          <a className={`navBar-items ${isClicked ? 'click' : ''}`} onClick={handleClick} href="#frontend">Frontend</a>
-          <a className={`navBar-items ${isClicked ? 'click' : ''}`} onClick={handleClick} href="#backend">Backend</a>
-          <a className={`navBar-items ${isClicked ? 'click' : ''}`} onClick={handleClick} href="#fullstack">Fullstack</a>
-          <a className={`navBar-items ${isClicked ? 'click' : ''}`} onClick={handleClick} href="#aboutme">About Me</a>
-          <a className={`navBar-items ${isClicked ? 'click' : ''}`} onClick={handleClick} href="#contactme">Contact Me</a>
+          <a className={`navBar-items ${isClicked ? 'click' : ''}`} onClick={handleClick} href="#main">Frontend</a>
+          <a className={`navBar-items ${isClicked ? 'click' : ''}`} onClick={handleClick} href="#main">Backend</a>
+          <a className={`navBar-items ${isClicked ? 'click' : ''}`} onClick={handleClick} href="#main">Fullstack</a>
+          <a className={`navBar-items ${isClicked ? 'click' : ''}`} onClick={handleClick} href="#main">About Me</a>
+          <a className={`navBar-items ${isClicked ? 'click' : ''}`} onClick={handleClick} href="#main">Contact Me</a>
 
         </nav >
 
