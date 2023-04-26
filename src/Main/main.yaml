@@ -24,10 +24,10 @@ state:
 
 methods: 
   - name: handleLeft
-    description: If currentChild is equal to the length of children minus one, it is set to zero, otherwise, it is incremented.
+    description: If currentChild is equal to zero, it is set to the length of children minus one, otherwise it is decremented.
 
   - name: handleRight
-    description: If currentChild is equal to zero, it is set to the length of children minus one, otherwise it is decremented.
+    description: If currentChild is equal to the length of children minus one, it is set to zero, otherwise, it is incremented.
 
 contents:
   - name: Left Arrow

@@ -8,18 +8,18 @@ export default function Main({ children }: IMainProps) {
     const [currentChild, setCurrentChild] = useState(0)
 
     const handleLeft = () => {
-        if(currentChild === children.length - 1) {
-            setCurrentChild(0);
-        } else {
-            setCurrentChild(currentChild + 1);
-        }
-    }
-
-    const handleRight = () => {
         if(currentChild === 0) {
             setCurrentChild(children.length - 1);
         } else {
             setCurrentChild(currentChild - 1);
+        }
+    }
+
+    const handleRight = () => {
+        if(currentChild === children.length - 1) {
+            setCurrentChild(0);
+        } else {
+            setCurrentChild(currentChild + 1);
         }
     }
 
