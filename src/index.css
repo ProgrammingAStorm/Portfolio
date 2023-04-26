@@ -47,7 +47,8 @@ body {
         @apply 
             m-1
             lg:text-9xl md:text-8xl sm:text-7xl text-5xl
-            transition-all;
+            transition-all
+            select-none;
     }
 
     .sub-header {
@@ -57,7 +58,8 @@ body {
             m-1
             lg:text-6xl md:text-5xl sm:text-4xl text-2xl
             opacity-0
-            transition-all;
+            transition-all
+            select-none;
     }
 
     .arrow {
@@ -79,7 +81,7 @@ body {
     }
 
     .section-header {
-        @apply lg:text-6xl md:text-5xl sm:text-4xl text-3xl;
+        @apply lg:text-6xl md:text-5xl sm:text-4xl text-3xl select-none;
     }
 
     .main-arrow {
