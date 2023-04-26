@@ -110,15 +110,15 @@ body {
     }
 
     .main {
-        @apply relative w-full lg:p-16 md:p-14 sm:p-12 p-4 bg-blue-900 transition-all;
+        @apply relative h-full w-full lg:p-16 md:p-14 sm:p-12 p-4 bg-blue-900 transition-all;
     }
 
     .section {
-        height: calc(100vh - (16.666667vh - 100px));
+        height: 100%;
 
         animation: fade-in 1s linear forwards;
         
-        @apply  flex flex-col items-center bg-amber-200 transition-all;
+        @apply flex flex-col items-center bg-amber-200 transition-all;
     }
 
     .section-header {
