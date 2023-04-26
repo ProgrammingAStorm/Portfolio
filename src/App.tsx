@@ -29,7 +29,7 @@ function App() {
 
           </Content>
 
-          <Content id="contactme" header="Conact Me">
+          <Content id="contactme" header="Contact Me">
 
           </Content>
         </Main>
