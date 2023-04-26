@@ -1,8 +1,14 @@
-import Hero from "./Hero";
-import Footer from "./Footer";
-import Content from "./Content";
-import Main from "./Main";
 import { useState } from "react";
+
+import Hero from "./Hero";
+import Main from "./Main";
+import Footer from "./Footer";
+
+import Frontend from "./Frontend";
+import Backend from "./Backend";
+import Fullstack from "./Fullstack";
+import AboutMe from "./AboutMe";
+import ContactMe from "./ContactMe";
 
 function App() {
   const [isClicked, setIsClicked] = useState(false);
@@ -13,12 +19,15 @@ function App() {
 
       {isClicked && (
         <Main>
+          <Frontend />
 
-          <Content />
+          <Backend />
 
-          <Content />
+          <Fullstack />
 
-          
+          <AboutMe />
+
+          <ContactMe />
         </Main>
       )}
 
