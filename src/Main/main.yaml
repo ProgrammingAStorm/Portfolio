@@ -1,0 +1,49 @@
+interface: 
+  - name: IMainProps
+
+    properties:
+      - name: children
+        type: ReactNode
+
+name: Main
+description: A wrapper for the main element to allow the children to shift back and forth
+
+state:
+  - name: currentChild
+    type: number
+    initialValue: 0
+    description: Index of child currently being displayed
+
+contents:
+  - name: Left Arrow
+    description: The left arrow.
+
+    classname: main-arrow left
+
+    template: <i></i>
+
+    contents: 
+      - name: Left Icon
+
+      - template: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
+
+
+  - name: Right Arrow
+    description: The right arrow.
+
+    classname: main-arrow right
+
+    template: <i></i>
+
+    contents: 
+      - name: Right Icon
+
+      - template: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+
+
+  - name: Current Child
+    description: Current child being displayed
+
+    template: {children[currentChild]}
+
+template: <main></main>

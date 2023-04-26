@@ -1,13 +1,14 @@
 import Hero from "./Hero";
 import Footer from "./Footer";
-import Content  from "./Content";
+import Content from "./Content";
+import Main from "./Main";
 
 function App() {
   return (
     <>
       <Hero />
 
-      <main className="main">
+      <Main>
         <Content id="frontend" header="Frontend">
 
         </Content>
@@ -26,8 +27,8 @@ function App() {
 
         <Content id="contactme" header="Conact Me">
 
-        </Content>        
-      </main>
+        </Content>
+      </Main>
 
       <Footer />
     </>

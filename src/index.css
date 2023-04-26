@@ -214,19 +214,31 @@ TODO {
     }
 
     .main {
-        @apply w-full;
+        @apply relative w-full lg:p-16 md:p-14 sm:p-12 p-4 bg-blue-900 transition-all;
     }
 
     .section {
+        height: calc(100vh - (16.666667vh - 100px));
+
         animation: open-up;
-
-        content: none;
-
-        @apply  flex flex-col items-center h-screen bg-orange-300
+        
+        @apply  flex flex-col items-center bg-amber-200 transition-all;
     }
 
     .section-header {
         @apply lg:text-6xl md:text-5xl sm:text-4xl text-3xl;
+    }
+
+    .main-arrow {
+        @apply absolute p-1 top-1/2 bg-slate-300 hover:bg-slate-100 rounded-full lg:scale-[1.75] md:scale-[1.5] sm:scale-[1.3] lg:hover:scale-[1.8] md:hover:scale-[1.55] sm:hover:scale-[1.35] transition-all;
+    }
+
+    .main-arrow.left {
+        @apply lg:left-4 md:left-3 sm:left-2 left-1;
+    }
+
+    .main-arrow.right {
+        @apply lg:right-4 md:right-3 sm:right-2 right-1;
     }
 
     .footer {
