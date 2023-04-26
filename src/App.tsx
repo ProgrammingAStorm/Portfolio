@@ -35,7 +35,9 @@ function App() {
         </Main>
       )}
 
-      <Footer />
+      {isClicked && (
+        <Footer />
+      )}
     </>
   )
 }
