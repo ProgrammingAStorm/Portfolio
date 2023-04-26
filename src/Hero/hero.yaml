@@ -56,9 +56,6 @@ contents:
     description: Element containing the arrow icon.
 
     lifecycle:
-      - componentDidMount:
-        description: If isVisible is true, the classname will include the class 'visible,' otherwise, it will not. If isClicked is true, the classname will include the class 'click,' otherwise, it will not. One second and a half after the component has mounted, isVisible is set to true. 
-      
       - onClick: 
         description: isClicked is set to true.
 

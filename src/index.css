@@ -18,12 +18,6 @@ body {
     height: 100%;
 }
 
-.arrow.visible {
-    opacity: 1;
-
-    bottom: 5rem;
-}
-
 @layer components {
     .header {
         @apply
@@ -31,7 +25,8 @@ body {
             h-full w-full
             min-w-[320px]
             p-2 sm:p-6 md:p-10 lg:p-14
-            bg-pink-500;
+            bg-pink-500
+            overflow-hidden;
     }
 
     .header-content {
@@ -47,6 +42,8 @@ body {
     }
 
     .main-header {
+        animation: slot-in-left-to-right .5s cubic-bezier(1, 1, 1, 1) forwards;
+        
         @apply 
             m-1
             lg:text-9xl md:text-8xl sm:text-7xl text-5xl
@@ -54,38 +51,17 @@ body {
     }
 
     .sub-header {
+        animation: slot-in-right-to-left .5s cubic-bezier(1, 1, 1, 1) .25s forwards;
+
         @apply
             m-1
             lg:text-6xl md:text-5xl sm:text-4xl text-2xl
+            opacity-0
             transition-all;
     }
 
-    .navBar {
-        @apply
-            flex flex-wrap
-            justify-center items-center
-            gap-1
-            h-1/2 w-full
-            bg-green-600
-            transition-all
-            overflow-x-auto; 
-    }
-
-    .navBar-items {
-        pointer-events: all;
-
-        @apply 
-            flex 
-            items-center justify-center
-            h-1/4 
-            px-8 
-            rounded-md 
-            transition-all
-            bg-slate-600;
-    }
-
     .arrow {
-        pointer-events: all;
+        animation: hop-up .25s cubic-bezier(1, 1, 1, 1) 4s forwards;
 
         @apply absolute bottom-0 left-1/2 p-2 bg-yellow-400 border-[3px] border-blue-600 rounded-full opacity-0 transition-all;
     }
@@ -97,7 +73,7 @@ body {
     .section {
         height: 100%;
 
-        animation: fade-in 1s linear forwards;
+        animation: fade-in 1s ease-in forwards;
         
         @apply flex flex-col items-center bg-amber-200 transition-all;
     }
@@ -132,6 +108,34 @@ body {
     }
 }
 
-@keyframes open-up {
+@keyframes hop-up {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        bottom: 4rem;
+    }
+}
 
+@keyframes slot-in-left-to-right {
+    from {
+        transform: translateX(-600%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+@keyframes slot-in-right-to-left {
+    from {
+        transform: translateX(600%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
 }
