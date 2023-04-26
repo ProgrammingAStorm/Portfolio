@@ -1,3 +1,14 @@
+interface:
+  - name: IHeroProps
+    description: Interface for the component's props
+
+    properties: 
+      - name: isClicked
+        type: boolean
+
+      - name: setIsClicked
+        type: Function
+
 name: Hero
 description: A header element that shrinks when an arrow that fades into view is clicked.
 

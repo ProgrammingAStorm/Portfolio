@@ -1,3 +1,11 @@
+import:
+  - name: interaction-observer
+
+import:
+  - name: useIsVisible
+  
+  from: react-is-visible
+
 interface: 
   - name: IMainProps
 

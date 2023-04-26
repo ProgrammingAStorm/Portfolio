@@ -1,7 +1,11 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 
-function Hero() {
-  const [isClicked, setIsClicked] = useState(false);
+interface IHeroProps {
+  isClicked: boolean;
+  setIsClicked: Function;
+}
+
+function Hero({ isClicked, setIsClicked }: IHeroProps) {
   const [isVisible, setIsVisible] = useState(false);
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 

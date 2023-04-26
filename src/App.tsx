@@ -2,11 +2,14 @@ import Hero from "./Hero";
 import Footer from "./Footer";
 import Content from "./Content";
 import Main from "./Main";
+import { useState } from "react";
 
 function App() {
+  const [isClicked, setIsClicked] = useState(true);
+
   return (
     <>
-      <Hero />
+      <Hero isClicked={isClicked} setIsClicked={setIsClicked}/>
 
       <Main>
         <Content id="frontend" header="Frontend">
