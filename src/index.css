@@ -25,14 +25,6 @@ body {
 }
 
 @layer components {
-    /* #root:has(.header) {
-        overflow: hidden;
-    }
-
-    #root:has(.header.click) {
-        overflow: auto;
-    } */
-
     .header {
         @apply
             flex
