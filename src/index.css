@@ -38,7 +38,8 @@ body {
     } */
 
     .header {
-        @apply  
+        @apply
+            flex
             h-full w-full
             min-w-[320px]
             p-2 sm:p-6 md:p-10 lg:p-14
@@ -48,21 +49,13 @@ body {
     .header-content {
         @apply 
             flex flex-col
+            justify-center items-center
             w-full h-full 
             rounded
             bg-purple-500
             sm:overflow-x-visible
             overflow-x-scroll
             transition-all;
-    }
-
-    .hero-headers {
-        @apply 
-        flex flex-col
-        justify-center
-        items-center
-        h-1/2 w-full
-        transition-all;
     }
 
     .main-header {

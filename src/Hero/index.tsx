@@ -17,12 +17,10 @@ const Hero: React.FC<IHeroProps> = ({ isClicked, setIsClicked }) => {
 
   return (
     <header className="header">
-      <div className="header-content">
-        <div className="hero-headers">
-          <h1 className="main-header">Mark Pavel</h1>
-          <h2 className='sub-header'>Fullstack Web Developer</h2>
-        </div>
-      </div>
+      <section className="header-content">
+        <h1 className="main-header">Mark Pavel</h1>
+        <h2 className='sub-header'>Fullstack Web Developer</h2>
+      </section>
 
       <i className={`arrow ${isVisible ? 'visible' : ''} ${isClicked ? 'click' : ''}`} onClick={() => setIsClicked(true)}>
         <a href="#main">
