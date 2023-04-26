@@ -5,33 +5,35 @@ import Main from "./Main";
 import { useState } from "react";
 
 function App() {
-  const [isClicked, setIsClicked] = useState(true);
+  const [isClicked, setIsClicked] = useState(false);
 
   return (
     <>
-      <Hero isClicked={isClicked} setIsClicked={setIsClicked}/>
+      <Hero isClicked={isClicked} setIsClicked={setIsClicked} />
 
-      <Main>
-        <Content id="frontend" header="Frontend">
+      {isClicked && (
+        <Main>
+          <Content id="frontend" header="Frontend">
 
-        </Content>
+          </Content>
 
-        <Content id="backend" header="Backend">
+          <Content id="backend" header="Backend">
 
-        </Content>
+          </Content>
 
-        <Content id="fullstack" header="Fullstack">
+          <Content id="fullstack" header="Fullstack">
 
-        </Content>
+          </Content>
 
-        <Content id="aboutme" header="About Me">
+          <Content id="aboutme" header="About Me">
 
-        </Content>
+          </Content>
 
-        <Content id="contactme" header="Conact Me">
+          <Content id="contactme" header="Conact Me">
 
-        </Content>
-      </Main>
+          </Content>
+        </Main>
+      )}
 
       <Footer />
     </>
