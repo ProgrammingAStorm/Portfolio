@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <Hero isClicked={isClicked} setIsClicked={setIsClicked} />
+      <Hero setIsClicked={setIsClicked} />
 
       {isClicked && (
         <Main>
