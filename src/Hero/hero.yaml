@@ -2,10 +2,7 @@ interface:
   - name: IHeroProps
     description: Interface for the component's props
 
-    properties: 
-      - name: isClicked
-        type: boolean
-
+    properties:
       - name: setIsClicked
         type: Function
 
@@ -17,11 +14,6 @@ state:
     type: boolean
     initialValue: false
     description: Whether or not the arrow has been clicked.
-
-  - name: isVisible
-    type: boolean
-    initialValue: false
-    description: Whether or not the arrow should be rendered.
 
 className: "header"
 
