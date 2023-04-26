@@ -63,9 +63,11 @@ body {
     }
 
     .arrow {
+        left: calc(50% - 3px - .5rem);
+
         animation: hop-up .25s cubic-bezier(1, 1, 1, 1) 4s forwards;
 
-        @apply absolute bottom-0 left-1/2 p-2 bg-yellow-400 border-[3px] border-blue-600 rounded-full opacity-0 transition-all;
+        @apply absolute flex bottom-0 p-2 bg-yellow-400 border-[3px] border-blue-600 rounded-full opacity-0 transition-all;
     }
 
     .main {
