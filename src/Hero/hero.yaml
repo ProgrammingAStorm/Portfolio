@@ -22,15 +22,6 @@ state:
     type: boolean
     initialValue: false
     description: Whether or not the arrow should be rendered.
-    
-  - name: isBurgerOpen
-    type: boolean
-    initialValue: false
-    description: Whether or not the navbar burger has been opened
-
-lifecycle:
-  - componentDidMount:
-    description: When isClicked is false, this classname will include the class 'click,' otherwise, it will not. 
 
 className: "header"
 
@@ -38,29 +29,17 @@ contents:
   - name: Hero Content
     description: The content of the header.
 
-    lifecycle:
-      - componentDidMount:
-        description: When isClicked is true, the classname will include the class 'click', otherwise, it will not.
-
     className: header-content
 
     contents: 
       - name: Hero Headers
         description: A container for the hero's headers
 
-        lifecycle: 
-          - componentDidMount: 
-            description: When isClicked is true, the classname will include the class 'click', otherwise, it will not.
-
         classname: hero-headers
 
         contents: 
           - name: Hero Header
             desctiption: A header for the hero.
-
-            lifecycle:
-              - componentDidMout:
-                description: When isClicked is true, the classname will include the class 'click', otherwise it will not.
 
             classname: main-header
 
@@ -69,131 +48,24 @@ contents:
           - name: Hero Sub-Header
             description: A sub-header for the hero.
 
-            lifecycle:
-              - componentDidMount:
-                description: When isClicked is false, the component will render, otherwise, it will not.
-
-            classname: sub-header 
+            classname: sub-header
 
             text: Fullstack Web Developer
 
-      - name: Hero Burger
-        description: A navbar burger that is only rendered when the page is scrolled that can be clicked to toggle the navbar.
+  - name: Hero Arrow
+    description: Element containing the arrow icon.
 
-        lifecycle:
-          - componentDidMount: 
-            description: If isClicked if false, this component will not render, otherwise, this component will render. If isBurgerOpen is set to true this component will have the class 'open' added to it, otherwise, it will not.
+    lifecycle:
+      - componentDidMount:
+        description: If isVisible is true, the classname will include the class 'visible,' otherwise, it will not. If isClicked is true, the classname will include the class 'click,' otherwise, it will not. One second and a half after the component has mounted, isVisible is set to true. 
+      
+      - onClick: 
+        description: isClicked is set to true.
 
-          - onClick:
-            description: The boolean value of isBurgerOpen is flipped.
+    classname: arrow
 
-        classname: burger
-
-        contents:
-          - name: Burger Content
-            description: Animated content of the hero burger.
-
-            classname: burger-content
-
-          - name: Burger Content
-            description: Animated content of the hero burger.
-          
-            classname: burger-content
-
-          - name: Burger Content
-            description: Animated content of the hero burger.
-          
-            classname: burger-content
-
-      - name: Hero Navigation
-        description: A nav element that holds links to differnt parts of the page.
-
-        lifecycle:
-          - componentDidMount: 
-            description: When isClicked is true, the classname will include the class 'click', otherwise, it will not. If isBurgerOpen and isScrolled is true, the classname will include the class 'open', otherwise it will not.
-
-        classname: navBar
-
-        contents:
-          - name: Front End Link
-            description: A link to navigate to a certain part of the page
-
-            lifecycle:
-              - onClick:
-                description: isClicked is set to true and isBurgerOpen is set to false.
-
-            className: navBar-items
-
-            href: 'frontend'
-
-            text: Frontend
-           
-          - name: Back End Link
-            description: A link to navigate to a certain part of the page
-
-            lifecycle:
-              - onClick:
-                description: isClicked is set to true and isBurgerOpen is set to false.
-
-            className: navBar-items
-
-            href: 'backend'
-
-            text: Backend
-
-          - name: Full Stack Link
-            description: A link to navigate to a certain part of the page
-
-            lifecycle:
-              - onClick:
-                description: isClicked is set to true and isBurgerOpen is set to false.
-
-            className: navBar-items
-
-            href: 'fullstack'
-
-            text: Fullstack
-
-          - name: About Me Link
-            description: A link to navigate to a certain part of the page
-
-            lifecycle:
-              - onClick:
-                description: isClicked is set to true and isBurgerOpen is set to false.
-
-            className: navBar-items
-
-            href: 'aboutme'
-
-            text: About Me
-
-          - name: Contact Me Link
-            description: A link to navigate to a certain part of the page
-
-            lifecycle:
-              - onClick:
-                description: isClicked is set to true and isBurgerOpen is set to false.
-
-            className: navBar-items
-
-            href: 'contactme'
-
-            text: Contact Me
-
-      - name: Hero Arrow
-        description: Element containing the arrow icon.
-
-        lifecycle:
-          - componentDidMount:
-            description: If isVisible is true, the classname will include the class 'visible,' otherwise, it will not. If isClicked is true, the classname will include the class 'click,' otherwise, it will not. One second and a half after the component has mounted, isVisible is set to true. 
-
-          - onClick: 
-            description: isClicked is set to true.
-
-        classname: arrow
-
-        contents:
-          - name: Arrow Icon
-            description: Arrow icon.
-
-            template: "<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" /></svg>"
+    contents:
+      - name: Arrow Icon      
+        description: Arrow icon.
+        
+        template: "<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" /></svg>"
