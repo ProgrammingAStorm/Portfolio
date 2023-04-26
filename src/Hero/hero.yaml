@@ -61,8 +61,14 @@ contents:
 
     classname: arrow
 
+    template: <i></i>
+
     contents:
       - name: arrow-link
+
+        lifecycle:
+          - onClick: 
+            description: isClicked is set to true.
 
         href: #main
 
