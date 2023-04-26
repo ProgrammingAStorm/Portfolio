@@ -24,10 +24,6 @@ body {
     bottom: 5rem;
 }
 
-.arrow.visible.click {
-    display: none;
-}
-
 @layer components {
     /* #root:has(.header) {
         overflow: hidden;
