@@ -44,9 +44,9 @@ function App() {
         </Main>
       )}
 
-      {isClicked && (
+      <CSSTransition in={currentSection === 4} unmountOnExit timeout={500}>
         <Footer />
-      )}
+      </CSSTransition>
     </>
   )
 }
