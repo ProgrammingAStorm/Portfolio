@@ -77,10 +77,6 @@ body {
     }
 
     .section {
-        height: 100%;
-
-        animation: build-out 1.5s cubic-bezier(1, .5, 1, 1) forwards;
-        
         @apply flex flex-col h-full w-full items-center bg-amber-200 min-w-[320px] transition-all;
     }
 
@@ -148,7 +144,7 @@ body {
     }
 }
 
-@keyframes build-out {
+/* @keyframes build-out {
     0%, 12.5%{
         display: none;
         width: 5%;
@@ -167,7 +163,7 @@ body {
         height: 100%;
         display: flex;
     }
-}
+} */
 
 @keyframes peach-to-blue {
     from {
