@@ -8,6 +8,8 @@ import AboutMe from "./AboutMe";
 import ContactMe from "./ContactMe";
 import Footer from "./Footer";
 
+import { frontendData, backendData, fullstackData} from "./data";
+
 import { CSSTransition } from "react-transition-group";
 
 function App() {
@@ -21,19 +23,19 @@ function App() {
       <CSSTransition in={isClicked} unmountOnExit timeout={500}>
         <Main currentSection={currentSection} setCurrentSection={setCurrentSection}>
           <CSSTransition in={currentSection === 0} unmountOnExit timeout={500}>
-            <Section header="Frontend" subHeaders={['React', 'Bootstrap', 'Tailwind', 'More']} animationName="frontend">
+            <Section header={frontendData.header} subHeaders={frontendData.subHeaders} animationName="frontend">
               <Article />
             </Section>
           </CSSTransition>
 
           <CSSTransition in={currentSection === 1} unmountOnExit timeout={500}>
-            <Section header="Backend" subHeaders={['Express', '.NET', 'NoSQL', 'More']} animationName="backend">
+            <Section header={backendData.header} subHeaders={backendData.subHeaders} animationName="backend">
               <Article />
             </Section>
           </CSSTransition>
 
           <CSSTransition in={currentSection === 2} unmountOnExit timeout={500}>
-            <Section header="Fullstack" subHeaders={['MERN', 'ASP.NET', 'Heroku', 'More']} animationName="fullstack">
+            <Section header={fullstackData.header} subHeaders={fullstackData.subHeaders} animationName="fullstack">
               <Article />
             </Section>
           </CSSTransition>
