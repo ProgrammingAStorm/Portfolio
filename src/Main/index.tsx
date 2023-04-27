@@ -1,25 +1,25 @@
 import { ReactNode, useRef, useState } from "react"
 
 interface IMainProps {
+    currentSection: number;
+    setCurrentSection: Function;
     children: ReactNode[];
 }
 
-export default function Main({ children }: IMainProps) {
-    const [currentChild, setCurrentChild] = useState(0)
-
+export default function Main({ currentSection, setCurrentSection, children }: IMainProps) {
     const handleLeft = () => {
-        if(currentChild === 0) {
-            setCurrentChild(children.length - 1);
+        if(currentSection === 0) {
+            setCurrentSection(children.length - 1);
         } else {
-            setCurrentChild(currentChild - 1);
+            setCurrentSection(currentSection - 1);
         }
     }
 
     const handleRight = () => {
-        if(currentChild === children.length - 1) {
-            setCurrentChild(0);
+        if(currentSection === children.length - 1) {
+            setCurrentSection(0);
         } else {
-            setCurrentChild(currentChild + 1);
+            setCurrentSection(currentSection + 1);
         }
     }
 
@@ -36,6 +36,6 @@ export default function Main({ children }: IMainProps) {
             </svg>
         </i>
 
-        {children[currentChild]}
+        {children}
     </main>
 }

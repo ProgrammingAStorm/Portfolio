@@ -1,11 +1,3 @@
-import:
-  - name: interaction-observer
-
-import:
-  - name: useIsVisible
-  
-  from: react-is-visible
-
 interface: 
   - name: IMainProps
 
@@ -13,14 +5,15 @@ interface:
       - name: children
         type: ReactNode
 
+      - name: currentSection
+        type: number
+
+      - name: setCurrentSection
+        type: Function
+
+
 name: Main
 description: A wrapper for the main element to allow the children to shift back and forth
-
-state:
-  - name: currentChild
-    type: number
-    initialValue: 0
-    description: Index of child currently being displayed
 
 methods: 
   - name: handleLeft
@@ -59,6 +52,6 @@ contents:
   - name: Current Child
     description: Current child being displayed
 
-    template: {children[currentChild]}
+    template: {children}
 
 template: <main></main>

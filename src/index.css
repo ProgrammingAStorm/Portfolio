@@ -71,6 +71,8 @@ body {
     }
 
     .main {
+        animation: peach-to-blue 1s linear forwards;
+
         @apply relative flex justify-center items-start h-full w-full lg:p-16 md:p-14 sm:p-12 p-4 bg-blue-900 transition-all;
     }
 
@@ -164,5 +166,14 @@ body {
         opacity: 100%;
         height: 100%;
         display: flex;
+    }
+}
+
+@keyframes peach-to-blue {
+    from {
+        background: palevioletred;
+    }
+    to {
+        background: blue;
     }
 }

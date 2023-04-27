@@ -21,7 +21,7 @@ function App() {
       <Hero setIsClicked={setIsClicked} />
 
       {isClicked && (
-        <Main>
+        <Main currentSection={currentSection} setCurrentSection={setCurrentSection}>
           <CSSTransition in={currentSection === 0} unmountOnExit timeout={1000}>
             <Frontend />
           </CSSTransition>
