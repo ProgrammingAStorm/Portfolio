@@ -25,8 +25,10 @@ export default function Section({ header, subHeaders, animationName, children }:
             })}
         </ul>
 
-        <ul>
-            {children}
-        </ul>
+        <div className="section-content">
+            <ul className="article-scroller">
+                {children}
+            </ul>
+        </div>
     </section>
 }

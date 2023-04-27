@@ -24,19 +24,19 @@ function App() {
         <Main currentSection={currentSection} setCurrentSection={setCurrentSection}>
           <CSSTransition in={currentSection === 0} unmountOnExit timeout={500}>
             <Section header={frontendData.header} subHeaders={frontendData.subHeaders} animationName="frontend">
-              <Article />
+              <Article payload={frontendData.payload}/>
             </Section>
           </CSSTransition>
 
           <CSSTransition in={currentSection === 1} unmountOnExit timeout={500}>
             <Section header={backendData.header} subHeaders={backendData.subHeaders} animationName="backend">
-              <Article />
+              <Article payload={frontendData.payload}/>
             </Section>
           </CSSTransition>
 
           <CSSTransition in={currentSection === 2} unmountOnExit timeout={500}>
             <Section header={fullstackData.header} subHeaders={fullstackData.subHeaders} animationName="fullstack">
-              <Article />
+              <Article payload={frontendData.payload}/>
             </Section>
           </CSSTransition>
 
