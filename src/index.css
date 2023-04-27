@@ -30,11 +30,11 @@ body {
 
 @layer components {
     .header {
-        @apply flex h-full w-full min-w-[320px] p-2 sm:p-6 md:p-10 lg:p-14 bg-pink-500 overflow-hidden;
+        @apply flex h-full w-full min-w-[320px] p-2 sm:p-6 md:p-10 lg:p-14 overflow-hidden;
     }
 
     .header-content {
-        @apply flex flex-col justify-center items-center w-full h-full rounded bg-purple-500 transition-all;
+        @apply flex flex-col justify-center items-center w-full h-full rounded transition-all;
     }
 
     .main-header {
@@ -58,7 +58,7 @@ body {
     }
 
     .main {
-        @apply relative flex justify-center items-start h-full w-full bg-emerald-200 min-w-[320px] transition-all overflow-hidden;
+        @apply relative flex justify-center items-start h-full w-full min-w-[320px] transition-all overflow-hidden;
     }
 
     .main-arrow {
@@ -76,7 +76,7 @@ body {
     }
 
     .section {
-        @apply relative flex flex-col h-full w-full p-2 sm:p-4 md:p-5 lg:p-6 bg-teal-700 min-w-[320px] transition-all;
+        @apply relative flex flex-col h-full w-full p-2 sm:p-4 md:p-5 lg:p-6 min-w-[320px] transition-all;
 
         transition-duration: 500ms;
     }
