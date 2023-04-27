@@ -81,11 +81,11 @@ body {
         transition-duration: 500ms;
     }
 
-    .frontend-header {
+    .section-header {
         @apply lg:text-7xl md:text-5xl sm:text-3xl text-xl;
     }
 
-    .frontend-sub-headers {
+    .section-sub-headers {
         @apply flex gap-2 lg:m-5 md:m-4 sm:m-3 m-2 lg:text-2xl md:text-xl sm:text-lg text-sm;
     }
 
