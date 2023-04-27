@@ -149,7 +149,7 @@ body {
     }
 
     .footer {
-        @apply h-1/6 w-full bg-amber-600;
+        @apply h-1/6 w-full;
     }
 }
 
