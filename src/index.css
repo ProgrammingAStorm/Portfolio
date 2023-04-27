@@ -22,6 +22,11 @@ body {
     margin: 0;
 }
 
+#root {
+    padding: 0;
+    margin: 0; 
+}
+
 .frontend.enter {
 }
 .frontend.enter-active {
@@ -57,12 +62,8 @@ body {
 
 @layer components {
     .background-image {
-        background: url("../public/campfire.gif");
-
-      
+        background: url("../public/campfire.gif");      
         background-position: 50% 50%;
-        
-        
 
         @apply fixed top-0 left-0 w-full h-full bg-no-repeat bg-fixed -z-10;
     }

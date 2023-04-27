@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <img className="background-image"/>
+      <div className="background-image"/>
 
       <Hero setIsClicked={setIsClicked} setCurrentSection={setCurrentSection} />
 
