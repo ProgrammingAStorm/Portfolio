@@ -18,6 +18,8 @@ function App() {
 
   return (
     <>
+      <img className="background-image"/>
+
       <Hero setIsClicked={setIsClicked} setCurrentSection={setCurrentSection} />
 
       <CSSTransition in={isClicked} unmountOnExit timeout={500}>
