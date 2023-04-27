@@ -14,15 +14,15 @@ import { CSSTransition } from "react-transition-group";
 
 function App() {
   const [isClicked, setIsClicked] = useState(false);
-  const [currentSection, setCurrentSection] = useState(0);
+  const [currentSection, setCurrentSection] = useState<number | null>(null);
 
   return (
     <>
-      <Hero setIsClicked={setIsClicked} />
+      <Hero setIsClicked={setIsClicked} setCurrentSection={setCurrentSection} />
 
       {isClicked && (
         <Main currentSection={currentSection} setCurrentSection={setCurrentSection}>
-          <CSSTransition in={currentSection === 0} unmountOnExit timeout={1000}>
+          <CSSTransition in={currentSection === 0} unmountOnExit timeout={20000} className="frontend">
             <Frontend />
           </CSSTransition>
 

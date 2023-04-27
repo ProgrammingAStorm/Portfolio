@@ -6,6 +6,9 @@ interface:
       - name: setIsClicked
         type: Function
 
+      - name: setCurrentSection
+        type: Function
+
 name: Hero
 description: A header element that shrinks when an arrow that fades into view is clicked.
 
@@ -60,7 +63,7 @@ contents:
 
         lifecycle:
           - onClick: 
-            description: isClicked is set to true.
+            description: isClicked is set to true and currentChild is set to zero.
 
         href: #main
 

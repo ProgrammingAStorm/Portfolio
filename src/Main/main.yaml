@@ -6,7 +6,7 @@ interface:
         type: ReactNode
 
       - name: currentSection
-        type: number
+        type: number | null
 
       - name: setCurrentSection
         type: Function

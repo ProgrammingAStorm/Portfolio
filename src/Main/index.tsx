@@ -1,7 +1,7 @@
 import { ReactNode, useRef, useState } from "react"
 
 interface IMainProps {
-    currentSection: number;
+    currentSection: number | null;
     setCurrentSection: Function;
     children: ReactNode[];
 }
@@ -11,7 +11,7 @@ export default function Main({ currentSection, setCurrentSection, children }: IM
         if(currentSection === 0) {
             setCurrentSection(children.length - 1);
         } else {
-            setCurrentSection(currentSection - 1);
+            setCurrentSection(currentSection! - 1);
         }
     }
 
@@ -19,7 +19,7 @@ export default function Main({ currentSection, setCurrentSection, children }: IM
         if(currentSection === children.length - 1) {
             setCurrentSection(0);
         } else {
-            setCurrentSection(currentSection + 1);
+            setCurrentSection(currentSection! + 1);
         }
     }
 
