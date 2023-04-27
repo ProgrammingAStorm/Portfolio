@@ -10,8 +10,11 @@ import Fullstack from "./Fullstack";
 import AboutMe from "./AboutMe";
 import ContactMe from "./ContactMe";
 
+import { CSSTransition } from "react-transition-group";
+
 function App() {
   const [isClicked, setIsClicked] = useState(false);
+  const [currentSection, setCurrentSection] = useState(0);
 
   return (
     <>
@@ -19,15 +22,25 @@ function App() {
 
       {isClicked && (
         <Main>
-          <Frontend />
+          <CSSTransition in={currentSection === 0} unmountOnExit timeout={1000}>
+            <Frontend />
+          </CSSTransition>
 
-          <Backend />
+          <CSSTransition in={currentSection === 1} unmountOnExit timeout={1000}>
+            <Backend />
+          </CSSTransition>
 
-          <Fullstack />
+          <CSSTransition in={currentSection === 2} unmountOnExit timeout={1000}>
+            <Fullstack />
+          </CSSTransition>
 
-          <AboutMe />
+          <CSSTransition in={currentSection === 3} unmountOnExit timeout={1000}>
+            <AboutMe />
+          </CSSTransition>
 
-          <ContactMe />
+          <CSSTransition in={currentSection === 4} unmountOnExit timeout={1000}>
+            <ContactMe />
+          </CSSTransition>
         </Main>
       )}
 
