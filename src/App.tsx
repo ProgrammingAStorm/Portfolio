@@ -22,23 +22,23 @@ function App() {
 
       {isClicked && (
         <Main currentSection={currentSection} setCurrentSection={setCurrentSection}>
-          <CSSTransition in={currentSection === 0} unmountOnExit timeout={20000} className="frontend">
+          <CSSTransition in={currentSection === 0} unmountOnExit timeout={500}>
             <Frontend />
           </CSSTransition>
 
-          <CSSTransition in={currentSection === 1} unmountOnExit timeout={1000}>
+          <CSSTransition in={currentSection === 1} unmountOnExit timeout={500}>
             <Backend />
           </CSSTransition>
 
-          <CSSTransition in={currentSection === 2} unmountOnExit timeout={1000}>
+          <CSSTransition in={currentSection === 2} unmountOnExit timeout={500}>
             <Fullstack />
           </CSSTransition>
 
-          <CSSTransition in={currentSection === 3} unmountOnExit timeout={1000}>
+          <CSSTransition in={currentSection === 3} unmountOnExit timeout={500}>
             <AboutMe />
           </CSSTransition>
 
-          <CSSTransition in={currentSection === 4} unmountOnExit timeout={1000}>
+          <CSSTransition in={currentSection === 4} unmountOnExit timeout={500}>
             <ContactMe />
           </CSSTransition>
         </Main>

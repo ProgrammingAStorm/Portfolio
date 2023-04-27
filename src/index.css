@@ -19,16 +19,12 @@ body {
 }
 
 .frontend.enter {
-    background: black;
 }
 .frontend.enter-active {
-    background: red;
 } 
 .frontend.exit {
-    background: yellow;
 }
 .frontend.exit-active {
-    background: green;
 }
 
 
@@ -62,17 +58,7 @@ body {
     }
 
     .main {
-        @apply relative flex justify-center items-start h-full w-full lg:p-16 md:p-14 sm:p-12 p-4 transition-all;
-    }
-
-    .section {
-        @apply flex flex-col h-full w-full items-center min-w-[320px] transition-all;
-
-        transition-duration: 5s;
-    }
-
-    .section-header {
-        @apply lg:text-6xl md:text-5xl sm:text-4xl text-3xl select-none;
+        @apply relative flex justify-center items-start h-full w-full bg-emerald-200 min-w-[320px] transition-all overflow-hidden;
     }
 
     .main-arrow {
@@ -87,6 +73,24 @@ body {
 
     .main-arrow.right {
         @apply lg:right-4 md:right-3 sm:right-2 right-1;
+    }
+
+    .section {
+        @apply absolute flex flex-col items-center h-full w-full p-2 sm:p-4 md:p-5 lg:p-6 bg-teal-700 min-w-[320px] transition-all;
+
+        transition-duration: 500ms;
+    }
+
+    .frontend-header {
+        @apply lg:text-7xl md:text-5xl sm:text-3xl text-xl;
+    }
+
+    .frontend-sub-headers {
+        @apply flex gap-2 lg:m-5 md:m-4 sm:m-3 m-2 lg:text-2xl md:text-xl sm:text-lg text-sm;
+    }
+
+    .article {
+        @apply flex-1;
     }
 
     .footer {
