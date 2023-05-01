@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 interface IHeroProps {
   setIsClicked: Function;
@@ -6,13 +6,23 @@ interface IHeroProps {
 }
 
 const Hero: React.FC<IHeroProps> = ({ setIsClicked, setCurrentSection }) => {
+  const [mouseCoords, setMouseCoords] = useState({ x: '', y: '' });
+  console.log(mouseCoords)
+
   return (
     <header className="header">
-      <section className="header-content">
+      <section className="header-content" onMouseMove={e => {
+        const blob = document.querySelector('.hero-blob');
+        const blobBox = blob?.getBoundingClientRect();
+
+        blob?.setAttribute('style', `top: ${e.clientY - blobBox!.height}px; left: ${e.clientX - blobBox!.width}px;`);
+      }}>
         <h1 className="main-header">Mark Pavel</h1>
         <h2 className='sub-header'>Fullstack Web Developer</h2>
-      </section>
 
+        <div className='hero-blob' />
+      </section>
+      
       <a href="#main" className="arrow" onClick={() => {
         setCurrentSection(0);
         setIsClicked(true);

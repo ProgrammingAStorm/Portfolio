@@ -46,25 +46,27 @@ body {
     }
 
     .header {
-        @apply flex justify-center items-center h-full w-full min-w-[320px] p-2 sm:p-6 md:p-10 lg:p-14 overflow-hidden;
+        @apply relative flex justify-center items-center h-full w-full min-w-[320px] p-2 sm:p-6 md:p-10 lg:p-14 overflow-hidden;
     }
 
     .header-content {
-        backdrop-filter: blur(25px);
-
-        @apply flex flex-col justify-center items-center w-4/5 sm:h-4/5 h-2/5 bg-slate-700 text-center bg-opacity-60 rounded-3xl transition-all;
+        @apply flex flex-col justify-center items-center w-4/5 sm:h-4/5 h-2/5 bg-slate-700 text-center bg-opacity-60 rounded-3xl backdrop-blur-xl overflow-hidden transition-all;
     }
 
     .main-header {
         animation: slot-in-left-to-right .5s cubic-bezier(1, 1, 1, 1) forwards;
 
-        @apply m-1 lg:text-9xl md:text-8xl sm:text-7xl text-5xl transition-all select-none;
+        @apply m-1 lg:text-9xl md:text-8xl sm:text-7xl text-5xl transition-all select-none pointer-events-none;
     }
 
     .sub-header {
         animation: slot-in-right-to-left .5s cubic-bezier(1, 1, 1, 1) .25s forwards;
 
-        @apply m-1 text-center lg:text-6xl md:text-5xl sm:text-4xl text-2xl opacity-0 transition-all select-none;
+        @apply m-1 text-center lg:text-6xl md:text-5xl sm:text-4xl text-2xl opacity-0 transition-all select-none pointer-events-none;
+    }
+
+    .hero-blob {
+        @apply absolute w-[320px] aspect-square bg-white rounded-full filter blur-xl opacity-50 -z-10;
     }
 
     .arrow {

@@ -18,6 +18,10 @@ state:
     initialValue: false
     description: Whether or not the arrow has been clicked.
 
+methods: 
+  - name: handleMouseMove
+    description: The element with the class hero-blob is queried and stored in blob. Blob's bounding client rect is stored in blobBox. Through the setting of blob's style attribute, top will be set to the difference between the clientY and blobBox's height, and left will be set to the difference between the clientX and blobBox's width. 
+
 className: "header"
 
 contents:
@@ -47,7 +51,16 @@ contents:
 
             text: Fullstack Web Developer
 
-  - name: arrow-link
+          - name: Hero Blob
+            description: Glowing blob within the hero content that follows the mouse within the hero content.
+
+            event:
+              - name: onMouseMove
+                handler: handleMouseMove
+
+            classname: hero-blob
+
+  - name: Arrow Link
 
     lifecycle:
       - onClick: 
