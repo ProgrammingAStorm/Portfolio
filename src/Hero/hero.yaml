@@ -20,7 +20,7 @@ state:
 
 methods: 
   - name: handleMouseMove
-    description: The element with the class hero-blob is queried and stored in blob. Blob's bounding client rect is stored in blobBox. Through the setting of blob's style attribute, top will be set to the difference between the clientY and blobBox's height, and left will be set to the difference between the clientX and blobBox's width. 
+    description: The element with the class hero-blob is queried and stored in blob. Blob's bounding client rect is stored in blobBox. Through the blob's animate function, top will be set to the difference between the clientY and blobBox's height in pixels, and left will be set to the difference between the clientX and blobBox's width in pixel, with a duration of 5000 and a fill of forwards. 
 
 className: "header"
 
