@@ -14,9 +14,9 @@ export default function Section({ header, subHeaders, animationName, children }:
         </h2>
 
         <ul className="section-sub-headers">
-            {subHeaders.map(value => {
+            {subHeaders.map((value, index) => {
                 return (
-                    <li>
+                    <li key={index}>
                         <h3>
                             {value}
                         </h3>
