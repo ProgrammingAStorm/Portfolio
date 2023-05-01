@@ -46,7 +46,7 @@ body {
     }
 
     .header {
-        @apply relative flex justify-center items-center h-full w-full min-w-[320px] p-2 sm:p-6 md:p-10 lg:p-14 overflow-hidden;
+        @apply flex justify-center items-center h-full w-full min-w-[320px] p-2 sm:p-6 md:p-10 lg:p-14 overflow-hidden;
     }
 
     .header-content {
