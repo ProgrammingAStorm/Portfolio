@@ -66,7 +66,7 @@ body {
     }
 
     .hero-blob {
-        @apply absolute w-[320px] aspect-square bg-white rounded-full filter blur-xl opacity-50 -z-10;
+        @apply absolute w-[320px] aspect-square bg-gradient-to-r from-pink-700 from-25% via-slate-600 via-15% to-purple-500 rounded-full filter blur-xl opacity-50 -z-10;
     }
 
     .arrow {
