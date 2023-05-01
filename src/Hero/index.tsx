@@ -6,8 +6,6 @@ interface IHeroProps {
 }
 
 const Hero: React.FC<IHeroProps> = ({ setIsClicked, setCurrentSection }) => {
-  const [mouseCoords, setMouseCoords] = useState({ x: '', y: '' });
-  console.log(mouseCoords)
 
   return (
     <header className="header">
@@ -15,7 +13,14 @@ const Hero: React.FC<IHeroProps> = ({ setIsClicked, setCurrentSection }) => {
         const blob = document.querySelector('.hero-blob');
         const blobBox = blob?.getBoundingClientRect();
 
-        blob?.setAttribute('style', `top: ${e.clientY - blobBox!.height}px; left: ${e.clientX - blobBox!.width}px;`);
+        blob?.animate({
+          top: `${e.clientY - blobBox!.height}px`,
+          left: `${e.clientX - blobBox!.width}px`
+        },
+        {
+          duration: 5000,
+          fill: "forwards"
+        });
       }}>
         <h1 className="main-header">Mark Pavel</h1>
         <h2 className='sub-header'>Fullstack Web Developer</h2>
