@@ -28,37 +28,45 @@ contents:
   - name: Hero Content
     description: The content of the header.
 
+    event:
+      - name: onMouseMove
+        handler: handleMouseMove
+
     className: header-content
 
     contents: 
-      - name: Hero Headers
-        description: A container for the hero's headers
+      - name: Hero Header
+        desctiption: A header for the hero.     
+        classname: main-header     
+         
+        text: Mark Pavel      
 
-        classname: hero-headers
+      - name: Hero Sub-Header
+        description: A sub-header for the hero.  
 
-        contents: 
-          - name: Hero Header
-            desctiption: A header for the hero.
+        classname: sub-header   
 
-            classname: main-header
+        text: Fullstack Web Developer  
 
-            text: Mark Pavel
+      - name: Hero Blob
+        description: Glowing blob within the hero content that follows the mouse within the hero content.     
+        
+        classname: hero-blob
 
-          - name: Hero Sub-Header
-            description: A sub-header for the hero.
+  - name: Image Carousel
+    description: A carousel of automatically scrolling pictures.
 
-            classname: sub-header
-
-            text: Fullstack Web Developer
-
-          - name: Hero Blob
-            description: Glowing blob within the hero content that follows the mouse within the hero content.
-
-            event:
-              - name: onMouseMove
-                handler: handleMouseMove
-
-            classname: hero-blob
+    props:
+      - pictures:
+        value: [
+          "autumn-mott-rodeheaver-gCduzLmwFYM-unsplash.jpg",
+          "josh-withers-EG8_QJ0OgOU-unsplash.jpg",
+          "josh-withers-TCBvy1-xHU8-unsplash.jpg",
+          "nico-iseli-lHmOqLRJUGs-unsplash.jpg",
+          "susan-wilkinson-eoi6KDLRork-unsplash.jpg"
+        ]
+    
+    template: <Carousel />
 
   - name: Arrow Link
 
