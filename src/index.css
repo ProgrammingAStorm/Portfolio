@@ -66,9 +66,9 @@ body {
     }
 
     .hero-blob {
-        animation: rotate 8s ease-in infinite;
+        animation: blob-rotate 8s ease-in infinite forwards;
 
-        @apply absolute w-[320px] aspect-square bg-gradient-to-r from-pink-700 from-25% via-slate-600 via-15% to-purple-500 rounded-full filter blur-xl opacity-50 -z-10;
+        @apply absolute w-32 min-w-[320px] aspect-square bg-gradient-to-r from-pink-700 from-25% via-sky-500 via-15% to-purple-500 rounded-full filter blur-2xl opacity-50 -z-10;
     }
 
     .arrow {
@@ -177,9 +177,12 @@ body {
     }
 }
 
-@keyframes rotate {
+@keyframes blob-rotate {
     from {
         rotate: 0deg;
+    }
+    50% {
+        scale: 1.25 .75;
     }
     to {
         rotate: 360deg;
