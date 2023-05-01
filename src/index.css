@@ -36,33 +36,10 @@ body {
 .frontend.exit-active {
 }
 
-@media (min-width: 1024px) {
-    .background-image {
-        background-size: 100% 100%;
-    }
-}
-
-@media (min-width: 768px) {
-    .background-image {
-        background-size: 150% 100%;
-    }
-}
-
-@media (min-width: 640px) {
-    .background-image {
-        background-size: 150% 100%;
-    }
-}
-
-@media (max-width: 639px) {
-    .background-image {
-        background-size: 350% 100%;
-    }
-}
-
 @layer components {
     .background-image {
-        background: url("../public/campfire.gif");      
+        background: url("/campfire.gif");   
+        background-size: 150% 150%;   
         background-position: 50% 50%;
 
         @apply fixed top-0 left-0 w-full h-full bg-no-repeat bg-fixed -z-10;
