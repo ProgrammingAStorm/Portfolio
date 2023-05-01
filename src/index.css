@@ -66,6 +66,8 @@ body {
     }
 
     .hero-blob {
+        animation: rotate 8s ease-in infinite;
+
         @apply absolute w-[320px] aspect-square bg-gradient-to-r from-pink-700 from-25% via-slate-600 via-15% to-purple-500 rounded-full filter blur-xl opacity-50 -z-10;
     }
 
@@ -172,6 +174,15 @@ body {
     to {
         transform: translateX(0%);
         opacity: 100;
+    }
+}
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
     }
 }
 
