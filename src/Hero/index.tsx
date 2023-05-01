@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Carousel from '../Carousel';
 
 interface IHeroProps {
   setIsClicked: Function;
@@ -28,6 +29,14 @@ const Hero: React.FC<IHeroProps> = ({ setIsClicked, setCurrentSection }) => {
         <div className='hero-blob' />
       </section>
       
+      <Carousel pictures={[
+        "autumn-mott-rodeheaver-gCduzLmwFYM-unsplash.jpg",
+        "josh-withers-EG8_QJ0OgOU-unsplash.jpg",
+        "josh-withers-TCBvy1-xHU8-unsplash.jpg",
+        "nico-iseli-lHmOqLRJUGs-unsplash.jpg",
+        "susan-wilkinson-eoi6KDLRork-unsplash.jpg"
+      ]}/>
+
       <a href="#main" className="arrow" onClick={() => {
         setCurrentSection(0);
         setIsClicked(true);
