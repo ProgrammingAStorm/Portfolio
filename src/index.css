@@ -231,8 +231,14 @@ body {
     from {
         rotate: 0deg;
     }
-    50% {
+    25% {
         scale: 1 1.5;
+    }
+    50% {
+        scale: 1.25 1.75;
+    }
+    75% {
+        scale: 1.5 1;
     }
     to {
         rotate: 360deg;

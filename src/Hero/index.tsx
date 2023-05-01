@@ -14,11 +14,11 @@ const Hero: React.FC<IHeroProps> = ({ setIsClicked, setCurrentSection }) => {
         const blobBox = blob?.getBoundingClientRect();
 
         blob?.animate({
-          top: `${e.clientY - blobBox!.height}px`,
-          left: `${e.clientX - blobBox!.width}px`
+          top: `${e.clientY - blobBox!.height / 2}px`,
+          left: `${e.clientX - blobBox!.width / 2}px`
         },
         {
-          duration: 5000,
+          duration: 2500,
           fill: "forwards"
         });
       }}>
