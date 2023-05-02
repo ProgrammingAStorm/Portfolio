@@ -32,7 +32,7 @@ export default function Main({ currentSection, setCurrentSection, children }: IM
     }
 
     return <main id="main" className="main">
-        <div className="main-content">
+        <div className="main-content slate-card">
             {isReady && (
                 <>
                     <i className="main-arrow left" onClick={handleLeft}>

@@ -6,10 +6,9 @@ interface IHeroProps {
 }
 
 const Hero: React.FC<IHeroProps> = ({ setIsClicked, setCurrentSection }) => {
-
   return (
     <header className="header">
-      <section className="header-content" onMouseMove={e => {
+      <section className="header-content slate-card" onMouseMove={e => {
         const blob = document.querySelector('.hero-blob');
         const blobBox = blob?.getBoundingClientRect();
 

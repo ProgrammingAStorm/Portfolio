@@ -38,7 +38,6 @@ contents:
       - componentDidMount:
           description: If isReady is true, the children of the component will render, otherwise, they will not. 
   
-
     classname: main-contents
 
     contents:
