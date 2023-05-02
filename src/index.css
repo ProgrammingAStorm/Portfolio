@@ -69,7 +69,7 @@ body {
 @layer components {
     .background-image {
         background: url("/campfire.gif");   
-        background-size: 125% 125%;   
+        background-size: 100% 100%;   
         background-position: 50% 50%;
 
         @apply fixed top-0 left-0 w-full h-full bg-no-repeat bg-fixed -z-10;
