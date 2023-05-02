@@ -136,21 +136,21 @@ body {
     .main-content {
         animation: build-out 1.75s ease-in-out .25s forwards;
 
-        @apply relative flex justify-center items-start h-full w-full lg:p-8 md:p-6 sm:p-4 p-2 overflow-hidden opacity-0 transition-all bg-blue-600;
+        @apply relative flex justify-center items-start h-full w-full min-w-[320px] lg:p-8 md:p-6 sm:p-4 p-2 opacity-0 transition-all bg-blue-600;
     }
 
     .main-arrow {
         animation: fade-in 1s ease-in 2s forwards;
 
-        @apply absolute p-1 top-1/2 bg-slate-300 hover:bg-slate-100 rounded-full lg:scale-[1.75] md:scale-[1.5] sm:scale-[1.3] lg:hover:scale-[1.8] md:hover:scale-[1.55] sm:hover:scale-[1.35] opacity-0 transition-all z-10;
+            @apply absolute p-1 top-1/2 bg-slate-400 hover:bg-slate-300 bg-opacity-75 hover:bg-opacity-50 border-2 border-slate-500 hover:border-slate-400 rounded-full lg:scale-[1.75] md:scale-[1.5] sm:scale-[1.3] lg:hover:scale-[1.8] md:hover:scale-[1.55] sm:hover:scale-[1.35] opacity-0 backdrop-blur-lg transition-all z-10;
     }
 
     .main-arrow.left {
-        @apply lg:left-4 md:left-3 sm:left-2 left-1;
+        @apply left-0;
     }
 
     .main-arrow.right {
-        @apply lg:right-4 md:right-3 sm:right-2 right-1;
+        @apply right-0;
     }
 
     .section {
@@ -182,7 +182,7 @@ body {
     }
 
     .article {
-        @apply h-full w-full min-w-[320px] bg-slate-400;
+        @apply h-full w-full min-w-[300px] bg-slate-400;
     }
 
     .footer {
