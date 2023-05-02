@@ -11,9 +11,13 @@ interface:
       - name: setCurrentSection
         type: Function
 
-
 name: Main
 description: A wrapper for the main element to allow the children to shift back and forth
+
+state:
+  - name: isReady
+    type: boolean
+    description: Determines whether or not the intitinal animation is done and if the children can be rendered.
 
 methods: 
   - name: handleLeft
@@ -22,36 +26,49 @@ methods:
   - name: handleRight
     description: If currentChild is equal to the length of children minus one, it is set to zero, otherwise, it is incremented.
 
+lifecycle:
+  - componentDidMount:
+      description: After 2 seconds, isReady is set to true.
+
 contents:
-  - name: Left Arrow
-    description: The left arrow.
+  - name: Main Content
+    description: Content being displayed within main. Acts as a panel wherein the contents will be displayed
 
-    classname: main-arrow left
+    lifecycle:
+      - componentDidMount:
+          description: If isReady is true, the children of the component will render, otherwise, they will not. 
+  
 
-    template: <i></i>
+    classname: main-contents
 
-    contents: 
-      - name: Left Icon
+    contents:
+      - name: Left Arrow
+        description: The left arrow.
 
-      - template: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
+        classname: main-arrow left
 
+        template: <i></i>
 
-  - name: Right Arrow
-    description: The right arrow.
+        contents: 
+          - name: Left Icon
 
-    classname: main-arrow right
+          - template: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
 
-    template: <i></i>
+      - name: Right Arrow
+        description: The right arrow.
 
-    contents: 
-      - name: Right Icon
+        classname: main-arrow right
 
-      - template: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+        template: <i></i>
 
+        contents: 
+          - name: Right Icon
 
-  - name: Current Child
-    description: Current child being displayed
+          - template: <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
 
-    template: {children}
+      - name: Current Child
+        description: Current child being displayed
+
+        template: {children}
 
 template: <main></main>
