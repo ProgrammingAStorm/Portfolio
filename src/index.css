@@ -80,6 +80,8 @@ body {
     }
 
     .carousel {
+        animation: fade-in 1s ease-in forwards;
+
         @apply absolute w-4/5 h-[45%] sm:h-4/5 overflow-hidden -z-10;
     }
 
@@ -269,6 +271,7 @@ body {
 @keyframes blob-rotate {
     from {
         rotate: 0deg;
+        scale: 1;
     }
     25% {
         scale: 1 1.5;
