@@ -178,35 +178,47 @@ body {
     }
 
     .footer {
-        @apply h-1/6 w-full p-2 sm:p-3 md:p-4 lg:p-5 min-w-[320px];
+        @apply sm:h-1/6 h-1/3 w-full p-2 sm:p-3 md:p-4 lg:p-5 min-w-[320px];
     }
 
     .footer-content {
-        @apply flex flex-col justify-between items-center h-full w-full p-2 sm:p-3 md:p-4 lg:p-5 bg-opacity-50 bg-slate-600 rounded-md;
+        @apply flex flex-col sm:flex-row items-center justify-evenly h-full w-full p-2 sm:p-3 md:p-4 lg:p-5 bg-opacity-50 bg-slate-600 rounded-md;
     }
 
-    .footer-header {
+    .footer-headers {
+        @apply flex flex-col items-center justify-center w-full sm:w-2/5 h-1/2 sm:h-full;
+    }
+
+    .footer-header-main {
         @apply flex items-center justify-center h-1/4 text-xl sm:text-2xl;
     }
 
-    .footer-links {
-        @apply flex justify-around w-1/2 h-3/4;
+    .footer-headers-sub {
+        @apply flex items-center justify-center gap-2;
     }
 
-    .footer-link-trim {
-        @apply flex items-center h-full w-1/6;
+    .footer-header-sub {
+        @apply text-base sm:text-lg;
+    }
+
+    .footer-links {
+        @apply flex flex-col justify-around w-full sm:w-2/5 h-1/2 sm:h-full;
+    }
+
+    .footer-links-list {
+        @apply flex flex-1 items-center justify-around;
     }
 
     .footer-link {
         @apply flex items-center justify-center h-full w-full;
     }
 
-    .linkedin {
+    /* .linkedin {
         background-image: url(/In-White-48.png);
         background-position: 100% 100%;
         background-size: 100% 100%;
         scale: .50 .75;
-    }
+    } */
 }
 
 @keyframes fade-in {
