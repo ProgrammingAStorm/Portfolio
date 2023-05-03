@@ -27,6 +27,40 @@ body {
     margin: 0; 
 }
 
+.hero-header-decor {
+    color: white;
+    
+    position: absolute;
+
+    height: 8px;
+    width: 8px;
+
+    border: 2px solid currentColor;
+    border-radius: 3px;
+
+    box-shadow: 0 0 0.25em currentColor;
+
+    rotate: 45deg;
+}
+
+.hero-header-decor:before {
+    content: "";
+    color: hsl(157, 34%, 61%);
+
+    position: absolute;
+    left: 1px;
+    bottom: -8px;
+
+    height: 20px;
+    width: 2px;
+
+    background: currentColor;
+
+    border-right: 5px currentColor;
+
+    box-shadow: 0 0 5rem currentColor;
+}
+
 .picture-frame.enter .picture-trim {
     opacity: 0.5;
     transform: translate(300%, 300%);
@@ -80,13 +114,13 @@ body {
     }
 
     .header-content {
-        @apply flex flex-col justify-center items-center w-4/5 sm:h-4/5 h-2/5 overflow-hidden transition-all;
+        @apply relative flex flex-col justify-center items-center w-4/5 sm:h-4/5 h-2/5 overflow-hidden transition-all;
     }
 
     .slate-card {
         @apply bg-slate-700 bg-opacity-60 text-center rounded-3xl shadow-slate-800 shadow-lg backdrop-blur-xl;
     }
-
+       
     .main-header {
         animation: slot-in-left-to-right .5s cubic-bezier(1, 1, 1, 1) forwards;
 

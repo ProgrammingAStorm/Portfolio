@@ -16,24 +16,27 @@ const Hero: React.FC<IHeroProps> = ({ setIsClicked, setCurrentSection }) => {
           top: `${e.clientY - blobBox!.height / 2}px`,
           left: `${e.clientX - blobBox!.width / 2}px`
         },
-        {
-          duration: 2500,
-          fill: "forwards"
-        });
+          {
+            duration: 2500,
+            fill: "forwards"
+          });
       }}>
         <h1 className="main-header">Mark Pavel</h1>
         <h2 className='sub-header'>Fullstack Web Developer</h2>
 
         <div className='hero-blob' />
+
+        <div className='hero-header-decor' style={{ left: "10%" }} />
+        <div className='hero-header-decor' style={{right: "10%"}}/>
       </section>
-      
+
       <Carousel pictures={[
         "autumn-mott-rodeheaver-gCduzLmwFYM-unsplash.jpg",
         "josh-withers-EG8_QJ0OgOU-unsplash.jpg",
         "josh-withers-TCBvy1-xHU8-unsplash.jpg",
         "nico-iseli-lHmOqLRJUGs-unsplash.jpg",
         "susan-wilkinson-eoi6KDLRork-unsplash.jpg"
-      ]}/>
+      ]} />
 
       <a href="#main" className="arrow" onClick={() => {
         setCurrentSection(0);

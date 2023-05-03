@@ -53,6 +53,26 @@ contents:
         
         classname: hero-blob
 
+      - name: Hero Decor Left
+        description: Decor for the left of the hero.
+
+        className: hero-header-decor
+
+        style:
+          - left: 10%
+
+        template: <span />
+
+      - name: Hero Decor Right
+        description: Decor for the right of the hero.
+
+        className: hero-header-decor
+
+        style:
+          - left: 90%
+
+        template: <span />
+
   - name: Image Carousel
     description: A carousel of automatically scrolling pictures.
 
