@@ -32,13 +32,13 @@ function App() {
 
           <CSSTransition in={currentSection === 1} unmountOnExit timeout={500}>
             <Section header={backendData.header} subHeaders={backendData.subHeaders} animationName="backend">
-              <Article payload={frontendData.payload}/>
+              <Article payload={backendData.payload}/>
             </Section>
           </CSSTransition>
 
           <CSSTransition in={currentSection === 2} unmountOnExit timeout={500}>
             <Section header={fullstackData.header} subHeaders={fullstackData.subHeaders} animationName="fullstack">
-              <Article payload={frontendData.payload}/>
+              <Article payload={fullstackData.payload}/>
             </Section>
           </CSSTransition>
 

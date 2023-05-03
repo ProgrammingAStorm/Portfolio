@@ -14,7 +14,7 @@ class SectionData {
 
 const frontendData = new SectionData(
     "Frontend",
-    ['React', 'Bootstrap', 'Tailwind', 'More'],
+    ['React, ', 'Bootstrap, ', 'Tailwind, ', '& More!'],
     {
         text: ["article", "article", "article"]
     }
@@ -22,7 +22,7 @@ const frontendData = new SectionData(
 
 const backendData = new SectionData(
     "Backend",
-    ['Express', '.NET', 'NoSQL', 'More'],
+    ['Express, ', '.NET, ', 'NoSQL, ', '& More!'],
     {
         text: ["article", "article", "article"]
     }
@@ -30,7 +30,7 @@ const backendData = new SectionData(
 
 const fullstackData = new SectionData(
     "Fullstack",
-    ['MERN', 'ASP.NET', 'Heroku', 'More'],
+    ['MERN, ', 'ASP.NET, ', 'Heroku, ', '& More!'],
     {
         text: ["article", "article", "article"]
     }

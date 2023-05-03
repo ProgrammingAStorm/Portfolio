@@ -234,9 +234,7 @@ body {
     }
 
     .article-scroller {
-        transform: translate(0%, 0%);
-
-        @apply absolute flex justify-center items-center gap-2 h-full w-full;
+        @apply absolute left-1/2 flex justify-center items-center gap-2 h-full w-full translate-x-1/2 transition-all;
     }
 
     .article-trim {
@@ -244,7 +242,7 @@ body {
     }
 
     .article {
-        @apply h-full w-full min-w-[300px] bg-slate-400;
+        @apply h-full w-full min-w-[300px] bg-slate-400 select-none;
     }
 
     .footer {
