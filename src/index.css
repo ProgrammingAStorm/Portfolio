@@ -234,7 +234,7 @@ body {
     }
 
     .article-scroller {
-        @apply absolute left-1/2 flex justify-center items-center gap-2 h-full w-full translate-x-1/2 transition-all;
+        @apply absolute left-1/2 flex justify-center items-center gap-2 h-full w-full -translate-x-1/4 transition-all;
     }
 
     .article-trim {
