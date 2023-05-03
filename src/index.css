@@ -27,44 +27,6 @@ body {
     margin: 0; 
 }
 
-.hero-header-decor {
-    color: white;
-    
-    position: absolute;
-
-    height: 8px;
-    width: 8px;
-
-    border: 2px solid currentColor;
-    border-radius: 3px;
-
-    box-shadow: 0 0 0.25em currentColor;
-
-    rotate: 45deg;
-
-    animation: fade-in 1s ease-in forwards;
-}
-
-.hero-header-decor:before {
-    content: "";
-    color: hsl(157, 34%, 61%);
-
-    position: absolute;
-    left: 1px;
-    bottom: -8px;
-
-    height: 20px;
-    width: 2px;
-
-    background: currentColor;
-
-    border-right: 5px currentColor;
-
-    box-shadow: 0 0 5rem currentColor;
-
-    animation: fade-in 1s ease-in forwards;
-}
-
 .picture-frame.enter .picture-trim {
     opacity: 0.5;
     transform: translate(300%, 300%);
@@ -123,6 +85,41 @@ body {
 
     .slate-card {
         @apply bg-slate-700 bg-opacity-60 text-center rounded-3xl shadow-slate-800 shadow-lg backdrop-blur-xl;
+    }
+
+    .hero-header-decor {
+        box-shadow: 0 0 0.25em white;
+        animation: fade-in 1s ease-in forwards;
+
+        @apply absolute h-[8px] w-[8px] border-2 border-white rounded-[3px] rotate-45;
+    }
+
+    .hero-header-decor.left {
+        @apply left-2 sm:right-4 md:left-6 lg:left-8
+    }
+
+    .hero-header-decor.right {
+        @apply right-2 sm:right-4 md:right-6 lg:right-8
+    }
+
+    .hero-header-decor:before {
+        content: "";
+        color: hsl(157, 34%, 61%);
+    
+        position: absolute;
+        left: 1px;
+        bottom: -8px;
+    
+        height: 20px;
+        width: 2px;
+    
+        background: currentColor;
+    
+        border-right: 5px currentColor;
+    
+        box-shadow: 0 0 5rem currentColor;
+    
+        animation: fade-in 1s ease-in forwards;
     }
        
     .main-header {

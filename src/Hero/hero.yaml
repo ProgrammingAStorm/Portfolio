@@ -56,20 +56,14 @@ contents:
       - name: Hero Decor Left
         description: Decor for the left of the hero.
 
-        className: hero-header-decor
-
-        style:
-          - left: 10%
+        className: hero-header-decor left
 
         template: <span />
 
       - name: Hero Decor Right
         description: Decor for the right of the hero.
 
-        className: hero-header-decor
-
-        style:
-          - left: 90%
+        className: hero-header-decor right
 
         template: <span />
 

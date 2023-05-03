@@ -26,8 +26,8 @@ const Hero: React.FC<IHeroProps> = ({ setIsClicked, setCurrentSection }) => {
 
         <div className='hero-blob' />
 
-        <div className='hero-header-decor' style={{ left: "10%" }} />
-        <div className='hero-header-decor' style={{ right: "10%" }} />
+        <div className='hero-header-decor left' />
+        <div className='hero-header-decor right' />
       </section>
 
       <Carousel pictures={[
