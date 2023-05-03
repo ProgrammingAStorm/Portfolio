@@ -41,6 +41,8 @@ body {
     box-shadow: 0 0 0.25em currentColor;
 
     rotate: 45deg;
+
+    animation: fade-in 1s ease-in forwards;
 }
 
 .hero-header-decor:before {
@@ -59,6 +61,8 @@ body {
     border-right: 5px currentColor;
 
     box-shadow: 0 0 5rem currentColor;
+
+    animation: fade-in 1s ease-in forwards;
 }
 
 .picture-frame.enter .picture-trim {
@@ -208,6 +212,8 @@ body {
     }
 
     .section-header {
+
+        animation: fade-in 1s ease-in forwards;
         color: hsl(0, 100%, 50%);
         text-shadow: 0 0 .5rem currentColor,
                      0 0 .0375em white;
