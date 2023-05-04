@@ -198,7 +198,7 @@ body {
     .section {
         animation: fade-in .5s ease-in forwards;
 
-        @apply relative flex flex-col h-full w-full p-2 sm:p-4 md:p-5 lg:p-4 min-w-[320px] transition-all;
+        @apply relative flex flex-col h-full w-full min-w-[320px] overflow-hidden transition-all;
     }
 
     .section-headers {
@@ -227,19 +227,21 @@ body {
     }
 
     .section-content {
-        @apply relative flex-1 overflow-hidden;
+        @apply relative flex-1;
     }
 
     .article-scroller {
         @apply absolute left-1/2 flex justify-center items-center gap-2 h-full w-full -translate-x-1/4 transition-all;
     }
 
-     .article-trim {
-        @apply flex items-center justify-center h-full;
+    .article-trim {
+        @apply flex items-center justify-center h-full p-2;
     }
 
     .article {
-        @apply  sm:h-full h-3/5 aspect-square sm:aspect-[3/4] bg-slate-400 select-none;
+        box-shadow: .5em .5em .25em rgba(0, 0, 0, 0.5);
+
+        @apply  sm:h-full h-4/5 aspect-square sm:aspect-[3/4] bg-white bg-opacity-5 border-slate-400 border-t-[1px] border-l-[1px] border-opacity-50 rounded-3xl select-none;
     }
 
     .footer {
