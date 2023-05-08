@@ -11,6 +11,7 @@ import Footer from "./Footer";
 import { frontendData, backendData, fullstackData} from "./data";
 
 import { CSSTransition } from "react-transition-group";
+import BgImage from "./BgImage";
 
 function App() {
   const [isClicked, setIsClicked] = useState(false);
@@ -18,7 +19,7 @@ function App() {
 
   return (
     <>
-      <div className="background-image"/>
+      <BgImage />
 
       <Hero setIsClicked={setIsClicked} setCurrentSection={setCurrentSection} />
 
