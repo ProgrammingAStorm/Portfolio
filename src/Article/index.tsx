@@ -30,7 +30,9 @@ export default function Article({ payload }: ArticleProps) {
         {payload.map(({ title, tech, github, deployment, image }, index) => {
             return <Tilt key={index} options={defaultOptions} style={{ height: '100%' }}>
                 <li className="article-trim">
-                    <article className="article" style={{ backgroundImage: image }}>
+                    <article className="article">
+                        <img className='article-image' src={image}/>
+
                         <h4 className='article-header'>{title}</h4>
 
                         <ul className='article-techs'>
