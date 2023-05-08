@@ -39,7 +39,7 @@ const backendData = new SectionData(
                 "Mongoose",
                 "MongoDB"
             ],
-            image: "./default.png",
+            image: "./default.jpg",
             deployment: null,
             github: "https://github.com/ProgrammingAStorm/SocialNetworkAPI",
         }

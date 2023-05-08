@@ -178,7 +178,7 @@ body {
 
         animation: build-out 1.75s ease-in-out .25s forwards;
 
-        @apply relative flex justify-center items-start min-w-[320px] lg:p-8 md:p-6 sm:p-4 p-2 border-2 transition-all;
+        @apply relative flex justify-center items-start min-w-[320px] lg:p-8 md:p-6 sm:p-4 p-2 border-2  transition-all;
     }
 
     .main-arrow {
@@ -235,25 +235,44 @@ body {
     }
 
     .article-trim {
-        @apply flex items-center justify-center h-full p-2;
+        @apply flex items-center justify-center h-full w-full p-2;
     }
 
     .article {
         box-shadow: .5em .5em .25em rgba(0, 0, 0, 0.5);
 
-        @apply relative flex flex-col sm:h-full h-4/5 aspect-square sm:aspect-[3/4] bg-white bg-opacity-5 border-slate-400 border-t-[1px] border-l-[1px] border-opacity-50 rounded-3xl overflow-hidden select-none;
+        @apply relative flex flex-col justify-between h-3/4 min-w-[300px] bg-white bg-opacity-5 border-slate-400 border-t-[1px] border-l-[1px] border-opacity-50 rounded-3xl overflow-hidden select-none;
     }
 
     .article-image {
-        @apply absolute h-full w-full object-cover opacity-75 -z-10;
+        @apply absolute h-full w-full object-cover opacity-75 translate-y-full -z-10 transition-all;
     }
 
-    .article-header {
-        @apply lg:text-2xl md:text-xl sm:text-lg text-base m-1;
+    .article:hover .article-image,
+    .article:focus .article-image {
+        @apply translate-y-0;
+    }
+
+    .article-header {        
+        @apply lg:text-2xl md:text-xl sm:text-lg text-base m-1 opacity-0 transition-all;
+    }
+
+    .article:hover .article-header,
+    .article:focus .article-header {
+        @apply opacity-100;
+    }
+
+    .article-headers {
+        @apply flex flex-col opacity-0 transition-all;
+    }
+
+    .article:hover .article-headers,
+    .article:focus .article-headers {
+        @apply opacity-100;
     }
 
     .article-techs {
-
+        @apply flex justify-center items-center;
     }
 
     .article-tech {
@@ -261,7 +280,16 @@ body {
     }
 
     .article-links {
-        @apply flex justify-around;
+        @apply flex justify-around p-2 opacity-0 transition-all;
+    }
+
+    .article:hover .article-links,
+    .article:focus .article-links {
+        @apply opacity-100;
+    }
+
+    .article-link {
+        @apply rounded-full shadow-slate-700 hover:shadow-sm hover:scale-110;
     }
 
     .footer {
