@@ -143,7 +143,7 @@ body {
     .carousel {
         animation: fade-in 1s ease-in forwards;
 
-        @apply absolute w-4/5 h-[45%] sm:h-4/5 overflow-hidden -z-10;
+        @apply absolute w-4/5 h-[45%] sm:h-4/5 rounded-3xl overflow-hidden -z-10;
     }
 
     .picture-frame {
