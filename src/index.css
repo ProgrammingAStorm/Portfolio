@@ -241,7 +241,23 @@ body {
     .article {
         box-shadow: .5em .5em .25em rgba(0, 0, 0, 0.5);
 
-        @apply  sm:h-full h-4/5 aspect-square sm:aspect-[3/4] bg-white bg-opacity-5 border-slate-400 border-t-[1px] border-l-[1px] border-opacity-50 rounded-3xl select-none;
+        @apply flex flex-col sm:h-full h-4/5 aspect-square sm:aspect-[3/4] bg-white bg-opacity-5 border-slate-400 border-t-[1px] border-l-[1px] border-opacity-50 rounded-3xl select-none;
+    }
+
+    .article-header {
+        @apply lg:text-2xl md:text-xl sm:text-lg text-base m-1;
+    }
+
+    .article-techs {
+
+    }
+
+    .article-tech {
+        @apply lg:text-lg md:text-base sm:text-sm text-xs m-1;
+    }
+
+    .article-links {
+        @apply flex justify-around;
     }
 
     .footer {

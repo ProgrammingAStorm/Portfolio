@@ -3,9 +3,9 @@ import { IArticleProps } from "../Article";
 class SectionData {
     header: string;
     subHeaders: string[];
-    payload: IArticleProps;
+    payload: IArticleProps[];
 
-    constructor(header: string, subheaders: string[], payload: IArticleProps) {
+    constructor(header: string, subheaders: string[], payload: IArticleProps[]) {
         this.header = header;
         this.subHeaders = subheaders;
         this.payload = payload
@@ -15,25 +15,54 @@ class SectionData {
 const frontendData = new SectionData(
     "Frontend",
     ['React, ', 'Bootstrap, ', 'Tailwind, ', '& More!'],
-    {
-        text: ["article", "article", "article"]
-    }
+    [
+        {
+            title: "Flutter Portfolio",
+            tech: [
+                "Flutter"
+            ],
+            image: "/flutter.png",
+            deployment: "https://programmingastorm.xyz/#/",
+            github: "https://github.com/ProgrammingAStorm/Flutter-Portfolio/tree/main"
+        }
+    ]
 );
 
 const backendData = new SectionData(
     "Backend",
     ['Express, ', '.NET, ', 'NoSQL, ', '& More!'],
-    {
-        text: ["article", "article", "article"]
-    }
+    [
+        {
+            title: "Social Network API",
+            tech: [
+                "Express",
+                "Mongoose",
+                "MongoDB"
+            ],
+            image: "/default.png",
+            deployment: null,
+            github: "https://github.com/ProgrammingAStorm/SocialNetworkAPI",
+        }
+    ]
 );
 
 const fullstackData = new SectionData(
     "Fullstack",
     ['MERN, ', 'ASP.NET, ', 'Heroku, ', '& More!'],
-    {
-        text: ["article", "article", "article"]
-    }
+    [
+        {
+            title: 'Instaclone',
+            tech: [
+                "React.js",
+                "Express.js",
+                "MongoDB",
+                "Mongoose"
+            ],
+            image: "/instaclone.png",
+            deployment: "https://instaclonev2.herokuapp.com/",
+            github: "https://github.com/VN135766/Instaclone-"
+        }
+    ]
 );
 
 export {
