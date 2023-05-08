@@ -5,8 +5,6 @@
   "homepage": "https://github.com/ProgrammingAStorm/Portfolio",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
@@ -28,7 +26,6 @@
     "@types/react-transition-group": "^4.4.5",
     "@vitejs/plugin-react-swc": "^3.0.0",
     "autoprefixer": "^10.4.14",
-    "gh-pages": "^5.0.0",
     "playwright": "^1.32.3",
     "postcss": "^8.4.22",
     "tailwindcss": "^3.3.1",
