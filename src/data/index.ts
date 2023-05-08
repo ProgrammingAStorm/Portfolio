@@ -21,7 +21,7 @@ const frontendData = new SectionData(
             tech: [
                 "Flutter"
             ],
-            image: "/flutter.png",
+            image: "./flutter.png",
             deployment: "https://programmingastorm.xyz/#/",
             github: "https://github.com/ProgrammingAStorm/Flutter-Portfolio/tree/main"
         }
@@ -39,7 +39,7 @@ const backendData = new SectionData(
                 "Mongoose",
                 "MongoDB"
             ],
-            image: "/default.png",
+            image: "./default.png",
             deployment: null,
             github: "https://github.com/ProgrammingAStorm/SocialNetworkAPI",
         }
@@ -58,7 +58,7 @@ const fullstackData = new SectionData(
                 "MongoDB",
                 "Mongoose"
             ],
-            image: "/instaclone.png",
+            image: "./instaclone.png",
             deployment: "https://instaclonev2.herokuapp.com/",
             github: "https://github.com/VN135766/Instaclone-"
         }
