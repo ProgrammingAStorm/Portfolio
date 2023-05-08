@@ -80,7 +80,7 @@ body {
     }
 
     .header-content {
-        @apply relative flex flex-col justify-center items-center w-4/5 sm:h-4/5 h-2/5 overflow-hidden transition-all;
+        @apply flex flex-col justify-center items-center w-4/5 sm:h-4/5 h-2/5 overflow-hidden transition-all;
     }
 
     .slate-card {
@@ -91,7 +91,7 @@ body {
         box-shadow: 0 0 0.25em white;
         animation: fade-in 1s ease-in forwards;
 
-        @apply absolute h-[8px] w-[8px] border-2 border-white rounded-[3px] rotate-45;
+        @apply absolute h-[5px] w-[5px] border-2 border-white rounded-[3px] rotate-45;
     }
 
     .hero-header-decor.left {
@@ -107,17 +107,17 @@ body {
         color: hsl(157, 34%, 61%);
     
         position: absolute;
-        left: 1px;
-        bottom: -8px;
+        left: 0;
+        bottom: -4px;
     
-        height: 20px;
-        width: 2px;
+        height: 9px;
+        width: 1px;
     
         background: currentColor;
     
         border-right: 5px currentColor;
     
-        box-shadow: 0 0 5rem currentColor;
+        box-shadow: 1em 1em 1rem currentColor;
     
         animation: fade-in 1s ease-in forwards;
     }
