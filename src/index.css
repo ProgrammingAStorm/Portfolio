@@ -57,13 +57,17 @@ body {
     animation: spin-second 0.25s ease 1 forwards;
 }
 
-.frontend.enter {
+.section.enter-active {
+    opacity: 0.33;
+    transform: translateX(200%);
 }
-.frontend.enter-active {
-} 
-.frontend.exit {
+.section.enter-done {
+    opacity: 0.66;
+    transform: translateX(0%);
 }
-.frontend.exit-active {
+.section.exit-active {
+    opacity: 0.66;
+    transform: translateX(-200%);
 }
 
 @layer components {

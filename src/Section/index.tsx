@@ -4,11 +4,10 @@ import Scroller from "../Scroller";
 interface ISectionProps {
     header: string;
     subHeaders: string[];
-    animationName: string;
     children: ReactNode | ReactNode[]
 }
 
-export default function Section({ header, subHeaders, animationName, children }: ISectionProps) {
+export default function Section({ header, subHeaders, children }: ISectionProps) {
     const [mouseDownAt, setMouseDownAt] = useState<number>(0);
     const [percentage, setPercentage] = useState<number>(0);
     const [prevPercentage, setPrevPercentage] = useState<number>(0);
@@ -68,7 +67,7 @@ export default function Section({ header, subHeaders, animationName, children }:
     };
 
 
-    return <section className={`section ${animationName}`}
+    return <section className="section"
         onMouseDown={handleOnDownMouse}
         onMouseUp={handleOnUpMouse}
         onMouseMove={handleOnMoveMouse}
