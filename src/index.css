@@ -237,7 +237,7 @@ body {
     .section-help {
         animation: fade-in 1s linear 2.5s forwards;
 
-        @apply text-slate-900 opacity-0;
+        @apply text-slate-900 text-opacity-60 opacity-0;
     }
 
     .section-content {
