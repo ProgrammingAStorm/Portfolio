@@ -19,7 +19,7 @@ const frontendData = new SectionData(
         {
             title: "Flutter Portfolio",
             tech: [
-                "Flutter"
+                "Flutter",
             ],
             image: "./flutter.png",
             deployment: "https://programmingastorm.xyz/#/",
@@ -36,8 +36,8 @@ const backendData = new SectionData(
             title: "Social Network API",
             tech: [
                 "Express",
-                "Mongoose",
-                "MongoDB"
+                "Sequelize",
+                "MySQL"
             ],
             image: "./default.jpg",
             deployment: null,
