@@ -234,6 +234,12 @@ body {
         @apply flex gap-2 self-center lg:m-5 md:m-4 sm:m-3 m-2 mb-4 lg:text-2xl md:text-xl sm:text-lg text-sm select-none;
     }
 
+    .section-help {
+        animation: fade-in 1s linear 2.5s forwards;
+
+        @apply text-slate-900 opacity-0;
+    }
+
     .section-content {
         @apply relative flex-1;
     }
@@ -343,7 +349,7 @@ body {
     }
 
     to {
-        opacity: initial;
+        opacity: 1;
     }
 }
 
