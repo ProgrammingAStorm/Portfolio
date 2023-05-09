@@ -88,7 +88,7 @@ const backendData = new SectionData(
                 "MySQL"
             ],
             image: "./default.jpg",
-            deployment: null,
+            deployment: "https://aqueous-basin-90599.herokuapp.com/",
             github: "https://github.com/ProgrammingAStorm/Express-Note-Taker",
         },
     ]
@@ -122,7 +122,7 @@ const fullstackData = new SectionData(
                 "Heroku"
             ],
             image: "./megatechblog.png",
-            deployment: null,
+            deployment: "https://sheltered-fortress-04150.herokuapp.com/",
             github: "https://github.com/ProgrammingAStorm/MegaTechBlog"
         },
         {
@@ -136,7 +136,7 @@ const fullstackData = new SectionData(
                 "Heroku"
             ],
             image: "./rippit.png",
-            deployment: null,
+            deployment: "https://vast-mesa-06136.herokuapp.com/",
             github: "https://github.com/ProgrammingAStorm/rippit"
         }
     ]
