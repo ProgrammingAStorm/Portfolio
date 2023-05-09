@@ -307,15 +307,15 @@ body {
     }
 
     .footer {
-        @apply sm:h-1/6 h-1/3 w-full p-2 sm:p-3 md:p-4 lg:p-5 min-w-[320px];
+        @apply flex justify-center sm:h-1/6 h-1/3 w-full min-w-[320px];
     }
 
     .footer-content {
-        @apply flex flex-col sm:flex-row items-center justify-evenly h-full w-full p-2 sm:p-3 md:p-4 lg:p-5 bg-opacity-50 bg-slate-600 rounded-md;
+        @apply flex flex-col sm:flex-row items-center justify-evenly h-full w-5/6 p-2 sm:p-3 md:p-4 lg:p-5 bg-opacity-50 bg-slate-600 rounded-full;
     }
 
     .footer-headers {
-        @apply flex flex-col items-center justify-center w-full sm:w-2/5 h-1/2 sm:h-full;
+        @apply flex flex-col flex-1 items-center justify-center w-full sm:w-2/5 h-1/2 sm:h-full;
     }
 
     .footer-header-main {

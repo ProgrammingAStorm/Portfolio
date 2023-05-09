@@ -7,19 +7,19 @@ export default function Footer() {
                 <ul className="footer-headers-sub">
                     <li>
                         <h5 className="footer-header-sub">
-                            React
+                            React,
                         </h5>
                     </li>
 
                     <li>
                         <h5 className="footer-header-sub">
-                            Tailwind
+                            Tailwind,
                         </h5>
                     </li>
 
                     <li>
                         <h5 className="footer-header-sub">
-                            CSSTransitions
+                            & CSSTransitions
                         </h5>
                     </li>
                 </ul>
