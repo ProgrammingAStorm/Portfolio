@@ -20,10 +20,33 @@ const frontendData = new SectionData(
             title: "Flutter Portfolio",
             tech: [
                 "Flutter",
+                "Dart"
             ],
             image: "./flutter.png",
             deployment: "https://programmingastorm.xyz/#/",
             github: "https://github.com/ProgrammingAStorm/Flutter-Portfolio/tree/main"
+        },
+        {
+            title: "Resume Template",
+            tech: [
+                "React",
+                "Tailwind",
+                "Typescript",
+                "Vite"
+            ],
+            image: "./resume-template.png",
+            deployment: "https://programmingastorm.github.io/Resume-Template/",
+            github: "https://github.com/ProgrammingAStorm/Resume-Template"
+        },
+        {
+            title: "FurEverHome",
+            tech: [
+                "Bulma",
+                "Javascript",
+            ],
+            image: "./fureverhome.png",
+            deployment: "https://programmingastorm.github.io/FurEverHome/",
+            github: "https://github.com/ProgrammingAStorm/FurEverHome"
         }
     ]
 );
@@ -35,6 +58,7 @@ const backendData = new SectionData(
         {
             title: "Social Network API",
             tech: [
+                "Node",
                 "Express",
                 "Sequelize",
                 "MySQL"
@@ -42,7 +66,31 @@ const backendData = new SectionData(
             image: "./default.jpg",
             deployment: null,
             github: "https://github.com/ProgrammingAStorm/SocialNetworkAPI",
-        }
+        },
+        {
+            title: "E-commerce Backend",
+            tech: [
+                "Node",
+                "Express",
+                "Sequelize",
+                "MySQL"
+            ],
+            image: "./default.jpg",
+            deployment: null,
+            github: "https://github.com/ProgrammingAStorm/E-commerce_Backend",
+        },
+        {
+            title: "Express Note Taker",
+            tech: [
+                "Node",
+                "Express",
+                "Sequelize",
+                "MySQL"
+            ],
+            image: "./default.jpg",
+            deployment: null,
+            github: "https://github.com/ProgrammingAStorm/Express-Note-Taker",
+        },
     ]
 );
 
@@ -56,11 +104,40 @@ const fullstackData = new SectionData(
                 "React.js",
                 "Express.js",
                 "MongoDB",
-                "Mongoose"
+                "Mongoose",
+                "Heroku"
             ],
             image: "./instaclone.png",
             deployment: "https://instaclonev2.herokuapp.com/",
             github: "https://github.com/VN135766/Instaclone-"
+        },
+        {
+            title: 'MegaTechBlog',
+            tech: [
+                "Handlebars",
+                "Express.js",
+                "MySQL",
+                "Sequelize",
+                "Bulma",
+                "Heroku"
+            ],
+            image: "./megatechblog.png",
+            deployment: null,
+            github: "https://github.com/ProgrammingAStorm/MegaTechBlog"
+        },
+        {
+            title: 'Rippit',
+            tech: [
+                "Bootstrap",
+                "Express.js",
+                "MySQL",
+                "Sequelize",
+                "Three.js",
+                "Heroku"
+            ],
+            image: "./rippit.png",
+            deployment: null,
+            github: "https://github.com/ProgrammingAStorm/rippit"
         }
     ]
 );
