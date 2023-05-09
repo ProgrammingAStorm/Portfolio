@@ -335,13 +335,6 @@ body {
     .footer-link {
         @apply flex items-center justify-center h-full w-full;
     }
-
-    /* .linkedin {
-        background-image: url(/In-White-48.png);
-        background-position: 100% 100%;
-        background-size: 100% 100%;
-        scale: .50 .75;
-    } */
 }
 
 @keyframes fade-in {
