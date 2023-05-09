@@ -286,7 +286,7 @@ body {
     }
 
     .article-techs {
-        @apply flex flex-wrap justify-center items-center gap-x-[5rem] px-6;
+        @apply flex flex-wrap justify-center items-center gap-x-[5rem] px-10;
     }
 
     .article-tech {
