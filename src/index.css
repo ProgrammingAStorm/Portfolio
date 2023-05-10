@@ -74,6 +74,16 @@ body {
     transform: translateX(-200%);
 }
 
+.footer.enter-active {
+    opacity: 0;
+}
+.footer.enter-done {
+    opacity: 1;
+}
+.footer.exit-active {
+    opacity: 0;
+}
+
 @layer components {
     .background-image {
         background: url("/campfire.gif");   
@@ -331,7 +341,7 @@ body {
     }
 
     .footer {
-        @apply flex justify-center sm:h-1/6 h-1/3 w-full min-w-[320px] p-2;
+        @apply flex justify-center sm:h-1/6 h-1/3 w-full min-w-[320px] p-2 opacity-0 transition-all;
     }
 
     .footer-content {
