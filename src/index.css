@@ -318,6 +318,18 @@ body {
         @apply text-slate-700 hover:text-slate-950 hover:underline;
     }
 
+    .contactme div {
+        @apply flex flex-col flex-1 justify-center items-center;
+    }
+
+    .contactme h3 {
+        @apply text-3xl lg:text-6xl md:text-5xl sm:text-4xl;
+    }
+
+    .contactme .content {
+        @apply text-xl lg:text-4xl md:text-3xl sm:text-2xl;
+    }
+
     .footer {
         @apply flex justify-center sm:h-1/6 h-1/3 w-full min-w-[320px] p-2;
     }
