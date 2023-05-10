@@ -347,7 +347,7 @@ body {
     }
 
     .footer-links-list {
-        @apply flex flex-1 items-center justify-around;
+        @apply flex flex-1 items-center justify-center gap-20;
     }
 
     .footer-link {
