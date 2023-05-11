@@ -92,8 +92,10 @@ export default function Section({ header, subHeaders, children }: ISectionProps)
             </ul>
         </div>
 
-        <span className="section-help">drag to scroll cards</span>
-        <span className="section-help">hover or tap cards to reveal content</span>
+        <div className="section-help">
+            <p>drag to scroll cards</p>
+            <p>hover or tap cards to reveal content</p>
+        </div>
 
         <div className="section-content">
             <Scroller>
