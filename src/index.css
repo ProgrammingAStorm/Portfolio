@@ -289,6 +289,14 @@ body {
         @apply flex flex-wrap justify-center items-center gap-x-[5rem] px-10;
     }
 
+    .article-tech-header {
+        @apply lg:text-xl md:text-lg sm:text-base text-sm;
+    }
+
+    .article-tech-trim {
+        @apply list-disc border-b-4 border-slate-700;
+    }
+
     .article-tech {
         @apply m-1 lg:text-lg md:text-base sm:text-sm text-xs;
     }

@@ -36,11 +36,11 @@ export default function Article({ payload }: ArticleProps) {
                         <h4 className='article-header'>{title}</h4>
 
                         <div className='article-headers'>
-                            <h5>Made with:</h5>
+                            <h5 className='article-tech-header'>Made with:</h5>
 
                             <ul className='article-techs'>
                                 {tech.map((value, index) => {
-                                    return <li key={index} className='list-disc'>
+                                    return <li key={index} className='article-tech-trim'>
                                         <h6 className='article-tech'>{value}</h6>
                                     </li>
                                 })}
