@@ -294,7 +294,7 @@ body {
     }
 
     .article-links {
-        @apply flex justify-around p-2 opacity-0 transition-all;
+        @apply flex justify-around p-2 bg-gradient-to-t from-slate-700 opacity-0 transition-all;
     }
 
     .article:hover .article-links,
