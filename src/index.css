@@ -259,7 +259,7 @@ body {
     }
 
     .article-image {
-        @apply absolute h-full w-full object-cover opacity-50 translate-y-[150%] -z-10 transition-all;
+        @apply absolute h-full w-full object-cover opacity-50 blur-md contrast-75 translate-y-[150%] -z-10 transition-all;
     }
 
     .article:hover .article-image,
