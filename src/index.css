@@ -102,7 +102,7 @@ body {
     }
 
     .slate-card {
-        @apply bg-slate-700 bg-opacity-60 text-center rounded-3xl shadow-slate-800 shadow-lg backdrop-blur-xl;
+        @apply bg-slate-700 bg-opacity-80 text-center rounded-3xl shadow-slate-800 shadow-lg backdrop-blur-xl;
     }
 
     .hero-header-decor {
