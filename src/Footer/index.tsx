@@ -1,5 +1,5 @@
 export default function Footer() {
-    return <footer className="footer">
+    return <footer id="footer" className="footer">
         <section className="footer-content slate-card">
             <div className="footer-headers">
                 <h4 className="footer-header-main">Made with ❤️‍🔥 using:</h4>

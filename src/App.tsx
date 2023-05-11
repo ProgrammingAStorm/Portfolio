@@ -8,7 +8,7 @@ import AboutMe from "./AboutMe";
 import ContactMe from "./ContactMe";
 import Footer from "./Footer";
 
-import { frontendData, backendData, fullstackData} from "./data";
+import { frontendData, backendData, fullstackData } from "./data";
 
 import { CSSTransition } from "react-transition-group";
 import BgImage from "./BgImage";
@@ -29,19 +29,19 @@ function App() {
         <Main currentSection={currentSection} setCurrentSection={setCurrentSection}>
           <CSSTransition in={currentSection === 0} unmountOnExit timeout={sectionTimeout}>
             <Section header={frontendData.header} subHeaders={frontendData.subHeaders}>
-              <Article payload={frontendData.payload}/>
+              <Article payload={frontendData.payload} />
             </Section>
           </CSSTransition>
 
           <CSSTransition in={currentSection === 1} unmountOnExit timeout={sectionTimeout}>
             <Section header={backendData.header} subHeaders={backendData.subHeaders}>
-              <Article payload={backendData.payload}/>
+              <Article payload={backendData.payload} />
             </Section>
           </CSSTransition>
 
           <CSSTransition in={currentSection === 2} unmountOnExit timeout={sectionTimeout}>
             <Section header={fullstackData.header} subHeaders={fullstackData.subHeaders}>
-              <Article payload={fullstackData.payload}/>
+              <Article payload={fullstackData.payload} />
             </Section>
           </CSSTransition>
 
