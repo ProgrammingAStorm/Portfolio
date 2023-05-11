@@ -122,22 +122,12 @@ body {
 
     .hero-header-decor:before {
         content: "";
-        color: hsl(157, 34%, 61%);
-    
-        position: absolute;
-        left: 1px;
-        bottom: -7px;
-    
-        height: 18px;
-        width: 2px;
-    
-        background: currentColor;
-    
-        border-right: 5px currentColor;
     
         box-shadow: 1em 1em 1rem currentColor;
     
         animation: fade-in 1s ease-in forwards;
+
+        @apply absolute left-[1px] bottom-[-7px] h-[18px] text-[#7abda3] bg-current border-r-[2px] border-current;
     }
        
     .main-header {
