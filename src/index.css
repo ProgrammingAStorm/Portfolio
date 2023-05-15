@@ -277,7 +277,7 @@ body {
     }
 
     .article-headers {
-        @apply flex flex-col items-center justify-center lg:text-xl md:text-lg sm:text-base text-sm opacity-0 transition-all;
+        @apply flex flex-col items-center justify-center my-5 lg:text-xl md:text-lg sm:text-base text-sm opacity-0 transition-all;
     }
 
     .article:hover .article-headers,
