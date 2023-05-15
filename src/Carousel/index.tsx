@@ -26,7 +26,7 @@ export default function Carousel({ pictures }: ICarouselProps) {
 
     return <section className="carousel">
         {pictures.map((value, index) => {
-            return <CSSTransition key={index} in={currentPicture === index} unmountOnExit timeout={500}>
+            return <CSSTransition key={index} in={currentPicture === index} unmountOnExit timeout={250}>
                 <ul className="picture-frame">
                     <li className="picture-trim">
                         <div className="picture" style={{ background: `url(./${value})`, backgroundSize: "500% 500%", backgroundPosition: "20% 20%" }} data-offset={0} />
